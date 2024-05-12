@@ -2,3 +2,8 @@
 @import "../../../base/_variables.scss";
 @import "../../../base/colors.scss";
 
+input,
+textarea {
+   background-color: transparent;
+   width: 100%;
+}

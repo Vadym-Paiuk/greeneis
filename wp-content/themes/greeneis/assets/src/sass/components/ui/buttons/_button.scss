@@ -1,20 +1,72 @@
 .btn {
-	width: rem(200);
-	padding: rem(11) 0;
-	font-family: 'HelveticaNeue', sans-serif;
+	min-width: rem(164);
+
+	padding-inline: rem(24);
+	padding-bottom: rem(11);
+	padding-top: rem(15);
+
+	font-family: $primary_font;
 	font-style: normal;
 	font-weight: 400;
-	font-size: rem(16);
-	line-height: 1.1875;
+	font-size: rem(20);
+	letter-spacing: rem(0.02);
+	line-height: 1.5;
 	text-align: center;
+	text-transform: uppercase;
+
 	color: $white;
+	background: $orange;
+
 	cursor: pointer;
-	background: #6B8FF7;
-	border-radius: rem(14);
+
 	border: none;
-	
+	transition: $transition-all-linear;
+
+	clip-path: polygon(
+		33.333% 16.964%,
+		49.722% 0%,
+		69.166% 10.512%,
+		86.891% 0%,
+		100% 8.347%,
+		100% 100%,
+		0% 100%,
+		0% 10.512%,
+		9.999% 0.094%,
+		33.333% 16.964%
+	);
+
 	@include media-breakpoint-down(md) {
-		font-size: rem(14);
+		// font-size: rem(14);
+	}
+
+	@media (any-hover: hover) {
+		&:hover {
+			background-color: $orange_dark;
+		}
 	}
 }
+.btn--white {
+	background-color: $white;
+	color: $black;
 
+	@media (any-hover: hover) {
+		&:hover {
+			background-color: $black_bg;
+
+			color: $white;
+		}
+	}
+}
+.btn--transparent {
+	font-size: rem(20);
+	letter-spacing: 0.02em;
+	color: $orange;
+	text-decoration: underline;
+
+	@media (any-hover: hover) {
+		&:hover {
+			text-decoration: none;
+			color: $orange_dark;
+		}
+	}
+}

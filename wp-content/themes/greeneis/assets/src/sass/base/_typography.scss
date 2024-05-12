@@ -2,78 +2,72 @@
 @import "./_variables.scss";
 @import "./_colors.scss";
 
-@include font-face("Inter", "../fonts/Inter/Inter-Medium", 500, normal);
+@include font-face("FjallaOne", "../dist/fonts/FjallaOne-Regular", 400, normal);
+@include font-face("Poppins", "../dist/fonts/Poppins-Regular", 400, normal);
+@include font-face("Lora", "../dist/fonts/Lora-SemiBold", 600, normal);
 
-h1 {
-	font-size: rem(42);
-	margin: 0;
-	font-weight: 800;
-	line-height: 1.2;
-	
-	@include media-breakpoint-down(md) {
-		font-size: rem(34);
-	}
+h1,
+.h1 {
+   font-family: $secondary_font;
+   font-size: rem(72);
+   font-weight: 600;
+   line-height: 1.11;
+   text-align: center;
+   color: $white;
 }
-
 h2 {
-	font-size: rem(42);
-	margin: 0;
-	font-weight: 800;
-	line-height: 1;
-	
-	@include media-breakpoint-down(md) {
-		font-size: rem(34);
-	}
+   font-family: $secondary_font;
+   font-size: rem(56);
+   font-weight: 600;
+   line-height: 1.14;
 }
-
 h3 {
-	font-size: rem(26);
-	margin: 0;
-	font-weight: 800;
-	line-height: 1.5;
-	
-	@include media-breakpoint-down(md) {
-		font-size: rem(22);
-	}
+   font-family: $secondary_font;
+   font-weight: 600;
+   font-size: rem(32);
+   line-height: 1.37;
 }
-
 h4 {
-	font-size: rem(18);
-	margin: 0;
-	font-weight: 800;
-	line-height: 1.5;
-	
-	@include media-breakpoint-down(md) {
-		font-size: rem(16);
-	}
+   font-family: $secondary_font;
+   font-weight: 600;
+   font-size: rem(24);
+   line-height: 1.33;
 }
-
-h5 {
-	font-size: rem(16);
-	margin: 0;
-	font-weight: 800;
-	line-height: 1.5;
-	
-	@include media-breakpoint-down(md) {
-		font-size: rem(14);
-	}
-}
-
-h6 {
-	font-size: rem(14);
-	margin: 0;
-	font-weight: 800;
-	line-height: 1.5;
-}
-
 p {
-	font-weight: 400;
-	font-size: rem(18);
-	line-height: 1.5;
-	padding: 0;
-	margin: 0;
-	
-	@include media-breakpoint-down(md) {
-		font-size: rem(16);
-	}
+   font-family: $third_font;
+   font-size: rem(18);
+   font-weight: 400;
+   line-height: 1.55;
+}
+.p2 {
+   font-family: $third_font;
+   font-size: rem(16);
+}
+.sub-title {
+   font-family: $primary_font;
+   font-weight: 400;
+   font-size: rem(16);
+   font-weight: 400;
+   letter-spacing: 0.02em;
+   text-transform: uppercase;
+
+   color: $orange;
+
+   padding-left: rem(20);
+
+   position: relative;
+   &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+
+      width: rem(8);
+      height: rem(8);
+
+      border-radius: 50%;
+
+      background-color: $orange;
+   }
 }

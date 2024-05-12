@@ -1,5 +1,5 @@
 //mixins
-$maxWidth: 1920;
+$maxWidth: 1440;
 $mobWidth: 428;
 $minWidth: 320;
 $rootFontSize: 16;
@@ -74,6 +74,7 @@ $rootFontSize: 16;
 		}
 	}
 }
+
 
 @mixin media-breakpoint-up($size) {
 	@if $size==xxl {
