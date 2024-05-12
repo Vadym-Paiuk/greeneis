@@ -1,6 +1,7 @@
 import "jquery-nice-select";
 import "jquery-timepicker/jquery.timepicker";
 
+
 class Global {
     constructor() {
         this.loader();

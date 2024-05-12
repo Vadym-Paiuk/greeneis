@@ -29,11 +29,48 @@
 </head>
 
 <body <?php body_class(); ?>>
-<?php wp_body_open(); ?>
+<?php wp_body_open(); 
+$path = get_template_directory_uri();
+?>
 
 <?php $header = get_field( 'header', 'options' ); ?>
 <header class="header">
+	<div class="container">
+		<div class="header__inner">
+			<div class="header__logo">
+				<a href="#">
+					<img  src="<?php echo $path;?>/assets/src/images/icons/logo.svg" alt="" loading="lazy">
+				</a>
+			</div>
+			<div class="header__menu">
+				<nav>
+					<ul>
+						<li><a href="#">Home</a></li>
+						<li class="menu-item-has-children">
+							<a href="#">Services</a>
+							<ul class="sub-menu">
+								<li><a href="#">Item 1</a></li>
+								<li><a href="#">Item 2</a></li>
+							</ul>
+						</li>
+						<li><a href="#">About</a></li>
+						<li>
+							<a href="#">Resources</a>
+							<ul class="sub-menu">
+								<li><a href="#">Item 1</a></li>
+								<li><a href="#">Item 2</a></li>
+							</ul>
+						</li>
+						<li><a href="#">Career</a></li>
+						<li><a href="#">Support</a></li>
+						<li><a href="#">Contact</a></li>
+					</ul>
+				</nav>
+			</div>
+			<a class="btn" href="#" >Get Started</a>
 
+		</div>
+	</div>
 </header>
 
 <main>
