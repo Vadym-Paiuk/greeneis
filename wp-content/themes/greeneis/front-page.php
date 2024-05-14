@@ -5,7 +5,8 @@
 
 <section class="hero">
    <div class="hero__bg">
-      <img  src="<?php echo $path;?>/assets/src/images/home/hero.jpg" alt="" loading="lazy">
+      <!-- <img  src="<?php echo $path;?>/assets/src/images/home/hero.jpg" alt="" loading="lazy"> -->
+      <video src="<?php echo $path;?>/assets/src/images/video.mp4" muted="" loop="true" autoplay="" preload="  " poster=""></video>
    </div>
    <div class="cotainer">
       <div class="hero__inner">

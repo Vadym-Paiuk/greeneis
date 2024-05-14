@@ -1,0 +1,92 @@
+.site-contact {
+   &__inner {
+      width: 100%;
+      max-width: rem(846);
+      margin-inline: auto;
+   }
+   &__form {
+      &.form {
+         form {
+            .gform_fields {
+               display: flex;
+               flex-wrap: wrap;
+               gap: rem(24);
+            }
+            .gfield {
+               flex: 1 1 calc(50% - rem(12));
+
+               input,
+               textarea {
+                  color: $gray;
+                  border-color: $white !important;
+                  background-color: $white;
+                  &::placeholder {
+                     color: inherit;
+                  }
+                  &:not([type="submit"]) {
+                     border-color: $gray_dark;
+                  }
+               }
+            }
+            .gform_footer {
+               input[type="submit"] {
+                  clip-path: polygon(
+                     100% 0%,
+                     92.755% 22.321%,
+                     72.251% 0%,
+                     58.568% 14.437%,
+                     31.449% 0%,
+                     17.357% 22.321%,
+                     9.999% 0%,
+                     0% 10.428%,
+                     0% 100%,
+                     100% 100%,
+                     100% 0%
+                  );
+               }
+            }
+         }
+      }
+   }
+}
+
+.contact-map {
+   background-color: $black_bg;
+   &__inner {
+      display: flex;
+   }
+
+   &__info {
+      flex: 0 1 50%;
+      padding-block: rem(270);
+      padding-right: rem(122);
+   }
+
+   &__info-inner {
+      display: flex;
+      flex-direction:column;
+      gap: rem(24);
+      width: 100%;
+      max-width: rem(310);
+   }
+
+   &__map {
+      flex: 1;
+      margin-right: calc(-50vw + 50%);
+
+      position: relative;
+
+      img,
+      iframe {
+         position: absolute;
+         inset: 0;
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+      }
+   }
+}
+.container {
+}
+.btn--transparent {
+}
