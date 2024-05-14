@@ -38,7 +38,7 @@ $path = get_template_directory_uri();
 	<div class="container">
 		<div class="header__inner">
 			<div class="header__logo">
-				<a href="#">
+				<a href="<?php echo home_url();?>">
 					<img  src="<?php echo $path;?>/assets/src/images/icons/logo.svg" alt="" loading="lazy">
 				</a>
 			</div>

@@ -2,9 +2,9 @@
 @import "./_variables.scss";
 @import "./_colors.scss";
 
-@include font-face("FjallaOne", "../dist/fonts/FjallaOne-Regular", 400, normal);
-@include font-face("Poppins", "../dist/fonts/Poppins-Regular", 400, normal);
-@include font-face("Lora", "../dist/fonts/Lora-SemiBold", 600, normal);
+@include font-face("FjallaOne", "../fonts/FjallaOne-Regular", 400, normal);
+@include font-face("Poppins", "../fonts/Poppins-Regular", 400, normal);
+@include font-face("Lora", "../fonts/Lora-SemiBold", 600, normal);
 
 h1,
 .h1 {
@@ -33,7 +33,8 @@ h4 {
    font-size: rem(24);
    line-height: 1.33;
 }
-p {
+p,
+.p1 {
    font-family: $third_font;
    font-size: rem(18);
    font-weight: 400;
@@ -43,12 +44,19 @@ p {
    font-family: $third_font;
    font-size: rem(16);
 }
+.p3 {
+   font-family: $third_font;
+
+   font-weight: 400;
+   font-size: rem(14);
+   line-height: 1.42;
+}
 .sub-title {
    font-family: $primary_font;
    font-weight: 400;
    font-size: rem(16);
    font-weight: 400;
-   letter-spacing: 0.02em;
+   letter-spacing: rem(2);
    text-transform: uppercase;
 
    color: $orange;

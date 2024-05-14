@@ -1,0 +1,536 @@
+@import "../base/_mixins.scss";
+@import "../base/_variables.scss";
+@import "../base/_colors.scss";
+
+.hero {
+   position: relative;
+   isolation: isolate;
+   padding-top: 0 !important;
+
+   &__bg {
+      position: absolute;
+      z-index: -1;
+      isolation: isolate;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+
+      &::before {
+         content: "";
+         position: absolute;
+         inset: 0;
+         width: 100%;
+         height: 100%;
+         background: linear-gradient(360deg, #1e1c23 0%, rgba(30, 28, 35, 0) 100%);
+      }
+      img,
+      video,
+      iframe {
+         position: absolute;
+         z-index: -2;
+         inset: 0;
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+      }
+   }
+
+   &__inner {
+      min-height: 100%;
+      display: flex;
+      justify-content: flex-end;
+
+      min-height: 100dvh;
+      height: 100%;
+   }
+   &__content {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
+      text-align: center;
+      gap: rem(24);
+
+      color: $white;
+
+      width: 100%;
+      max-width: rem(730);
+
+      margin-inline: auto;
+      padding-bottom: rem(64);
+      padding-top: rem(140);
+
+      p {
+         font-family: $third_font;
+         font-size: rem(18);
+         line-height: 1.55;
+      }
+   }
+}
+
+.section-content {
+   background-color: $black_bg;
+   padding-top: rem(150);
+   padding-bottom: rem(150);
+   &__inner {
+      color: $white;
+   }
+
+   &__top {
+      width: 100%;
+      max-width: rem(950);
+      margin-bottom: rem(36);
+   }
+
+   &__bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: rem(60);
+
+      .sub-title {
+         &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: calc(100% + rem(44));
+            width: rem(302);
+            height: rem(1);
+            background-color: $white;
+            opacity: 0.3;
+         }
+      }
+   }
+
+   &__bottom-text {
+      flex: 0 1 rem(628);
+   }
+}
+
+.cards-content {
+   background-color: $black_bg;
+   padding-bottom: rem(150);
+   &__header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: rem(24);
+      margin-bottom: rem(60);
+   }
+
+   &__cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(rem(302), 1fr));
+      column-gap: rem(22);
+      row-gap: rem(24);
+   }
+
+   &__card {
+      background-color: $back_bg_2;
+      padding-block: rem(32);
+      padding-inline: rem(24);
+
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      gap: rem(16);
+      min-height: rem(378);
+   }
+
+   &__card-header {
+      display: grid;
+      gap: rem(24);
+
+      span {
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         background-color: $orange;
+         border-radius: 50%;
+         width: rem(48);
+         height: rem(48);
+      }
+      p {
+         font-family: $primary_font;
+         font-size: rem(20);
+         letter-spacing: 0.02em;
+         line-height: 1.4;
+      }
+   }
+
+   &__card-text {
+      p {
+         @extend .p2;
+      }
+   }
+
+   &__card-link {
+      margin-top: auto;
+   }
+}
+
+.content-bg {
+   position: relative;
+   &__bg,
+   &__bg-decor {
+      position: absolute;
+
+      img {
+         position: absolute;
+         inset: 0;
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+      }
+   }
+   &__bg {
+      position: absolute;
+      z-index: -2;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+   }
+   &__bg-decor {
+      position: absolute;
+      bottom: 0;
+      inset-inline: 0;
+      height: 67%;
+   }
+
+   &__main {
+      display: flex;
+      justify-content: flex-end;
+      padding-top: rem(190);
+   }
+
+   &__content {
+      flex: 0 1 rem(520);
+      min-height: rem(610);
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: rem(24);
+
+      color: $white;
+      background-color: $orange;
+
+      padding-top: rem(120);
+      padding-bottom: rem(64);
+      padding-inline: rem(48);
+
+      clip-path: polygon(
+         0% 4.918%,
+         20.135% 0%,
+         61.175% 7.787%,
+         86.031% 3.115%,
+         100% 4.918%,
+         100% 100%,
+         0% 100%,
+         0% 4.918%
+      );
+
+      .sub-title {
+         color: $white;
+      }
+   }
+   &__btn {
+      margin-top: auto;
+   }
+}
+
+.cards-slider {
+   position: relative;
+   background-color: $green_light_2;
+
+   padding-top: rem(150);
+   padding-bottom: rem(50);
+   &__header {
+      display: flex;
+      justify-content: space-between;
+      gap: rem(60);
+   }
+   &__header-inner {
+      display: grid;
+      gap: rem(24);
+      h2 {
+         color: $back_bg_2;
+      }
+   }
+
+   &__slide {
+      display: flex;
+      flex-direction: column;
+      height: auto;
+   }
+   &__slider-actions {
+      align-self: flex-end;
+      padding-bottom: rem(12);
+
+      display: flex;
+      align-items: center;
+      gap: rem(16);
+      button {
+         position: static;
+         border: none;
+         margin: 0;
+         opacity: 1;
+         height: rem(48);
+         width: rem(48);
+
+         background-color: $green;
+
+         transition: $transition-all-linear;
+         &::after {
+            display: none;
+         }
+
+         clip-path: polygon(
+            92.262% 0%,
+            0.184% 0%,
+            0.184% 100%,
+            92.262% 100%,
+            96.905% 78.906%,
+            85.298% 51.563%,
+            100% 21.875%,
+            92.262% 0%
+         );
+
+         &:nth-child(2) {
+            transform: rotate(180deg);
+         }
+
+         img {
+            width: rem(8);
+            margin-right: rem(5);
+         }
+         @media (any-hover: hover) {
+            &:hover {
+               background-color: $orange;
+            }
+         }
+      }
+   }
+}
+
+.card {
+   display: flex;
+   flex-direction: column;
+   height: 100%;
+
+   gap: rem(24);
+   &__img {
+      clip-path: polygon(
+         0% 100%,
+         100% 100%,
+         100% 6.166%,
+         81.144% 0%,
+         55.84% 11.662%,
+         19.708% 3.217%,
+         0% 6.166%,
+         0% 100%
+      );
+
+      position: relative;
+      height: rem(373);
+      img {
+         position: absolute;
+         inset: 0;
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+      }
+   }
+
+   &__main {
+      display: flex;
+      flex-direction: column;
+      gap: rem(16);
+      flex: 1 1 auto;
+   }
+
+   &__info {
+      display: flex;
+      align-items: center;
+      gap: rem(24);
+
+      time {
+         @extend .p2;
+         color: $black_bg;
+         opacity: 0.8;
+      }
+   }
+
+   &__cats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: rem(8);
+      a {
+         padding-block: rem(4);
+         padding-inline: rem(12);
+
+         font-family: $third_font;
+         font-size: rem(14);
+         font-weight: 400;
+         line-height: 1.42;
+
+         color: $green;
+         background-color: $green_light;
+
+         transition: $transition-all-linear;
+
+         &.active {
+            background-color: $green;
+            color: $white;
+         }
+
+         @media (any-hover: hover) {
+            &:hover {
+               background-color: $green;
+               color: $white;
+            }
+         }
+      }
+   }
+   &__content {
+      flex: 1 1 auto;
+      color: $black_bg;
+      display: grid;
+      gap: rem(16);
+
+      p {
+         @extend h4;
+      }
+      span {
+         margin-top: auto;
+         @extend .p2;
+         opacity: 0.8;
+      }
+   }
+   &__btn {
+      margin-top: auto;
+   }
+}
+.subscribe {
+   background-color: $green_light_2;
+
+   padding-top: rem(50);
+   padding-bottom: rem(150);
+   &__inner {
+      display: flex;
+   }
+   &__form-wrap {
+      background-color: $green;
+      padding-inline: rem(64);
+      padding-top: rem(80);
+      padding-bottom: rem(100);
+      flex: 0 0 rem(520);
+   }
+   &__form-header {
+      display: grid;
+      gap: rem(16);
+      margin-bottom: rem(32);
+      p {
+         color: $gray_2;
+      }
+   }
+   &__form {
+      form {
+         .gform_fields {
+            display: flex;
+            flex-direction: column;
+            gap: rem(16);
+         }
+      }
+   }
+   &__img {
+      flex: 1 1 auto;
+      position: relative;
+      img {
+         position: absolute;
+         inset: 0;
+         height: 100%;
+         width: 100%;
+         object-fit: cover;
+      }
+   }
+}
+.form {
+   form {
+      .gfield {
+         label {
+            display: none;
+         }
+         input,
+         textarea {
+            &:not([type="submit"]) {
+               background-color: transparent;
+               min-height: rem(56);
+               outline: none;
+               border: rem(1) solid $gray;
+
+               padding-inline: rem(20);
+               padding-block: rem(16);
+               @extend .p2;
+               color: $gray_light;
+
+               &::placeholder {
+                  @extend .p2;
+                  color: inherit;
+               }
+
+               &:focus,
+               &:focus:hover,
+               &:autofill,
+               &:-webkit-autofill {
+                  border-color: $orange;
+               }
+            }
+         }
+         textarea {
+            height: rem(160);
+            resize: none;
+         }
+         label {
+            @extend .p2;
+            color: $gray_light !important;
+         }
+      }
+      .gform_footer {
+         margin-top: rem(16);
+
+         input[type="submit"] {
+            clip-path: polygon(
+               100% 8.261%,
+               86.891% 14.371%,
+               72.251% 0%,
+               58.568% 14.437%,
+               31.458% 0%,
+               17.263% 14.437%,
+               9.999% 0%,
+               0% 10.428%,
+               0% 100%,
+               100% 100%,
+               100% 8.261%
+            );
+
+            cursor: pointer;
+            background-color: $orange !important;
+            color: $white;
+
+            padding-top: rem(15);
+            padding-bottom: rem(11);
+            padding-inline: rem(80);
+            outline: none;
+            border: none;
+
+            font-size: rem(30);
+            line-height: 1;
+            font-weight: 400;
+            text-align: center;
+
+            transition: $transition-all-linear;
+         }
+      }
+   }
+}
