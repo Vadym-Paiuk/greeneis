@@ -9,7 +9,9 @@
    <div class="container">
       <div class="site-archive__inner">
          <div class="site-archive__header">
-            <h1>Technical Support</h1>
+            <div class="site-archive__header-content">
+               <h1>Technical Support</h1>
+            </div>
          </div>
          <div class="site-archive__cards site-archive__cards--flex">
             <div class="card-support">

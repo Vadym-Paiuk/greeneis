@@ -9,8 +9,10 @@
    <div class="container">
       <div class="site-contact__inner site-archive__inner ">
          <div class="site-archive__header">
-            <h1>Get In Touch</h1>
-            <p>Let’s chat about your IT needs!</p>
+            <div class="site-archive__header-content">
+               <h1>Get In Touch</h1>
+               <p>Let’s chat about your IT needs!</p>
+            </div>
          </div>
          <div class="site-contact__form  form">
             <form method="post" enctype="multipart/form-data" target="gform_ajax_frame_2" id="gform_2" action="/#gf_2" data-formid="2" novalidate="">
