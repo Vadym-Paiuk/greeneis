@@ -10,8 +10,10 @@
    <div class="container">
       <div class="site-archive__inner">
          <div class="site-archive__header">
-            <h1>Careers</h1>
-            <p>Interested in joining our team at Greene IS? Make sure to check out our latest job openings below. If you don’t see a career that fits your skillset but you think you’re a match with Greene, please reach out!</p>
+            <div class="site-archive__header-content">
+               <h1>Careers</h1>
+               <p>Interested in joining our team at Greene IS? Make sure to check out our latest job openings below. If you don’t see a career that fits your skillset but you think you’re a match with Greene, please reach out!</p>
+            </div>
          </div>
          <div class="site-archive__cards site-archive__cards--grid">
             <article class="card-location">
