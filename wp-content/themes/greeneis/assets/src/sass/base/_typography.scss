@@ -15,19 +15,22 @@ h1,
    text-align: center;
    color: $white;
 }
-h2 {
+h2,
+.h2 {
    font-family: $secondary_font;
    font-size: rem(56);
    font-weight: 600;
    line-height: 1.14;
 }
-h3 {
+h3,
+.h3 {
    font-family: $secondary_font;
    font-weight: 600;
    font-size: rem(32);
    line-height: 1.37;
 }
-h4 {
+h4,
+.h4 {
    font-family: $secondary_font;
    font-weight: 600;
    font-size: rem(24);
@@ -50,6 +53,10 @@ p,
    font-weight: 400;
    font-size: rem(14);
    line-height: 1.42;
+   @media (max-width: $tablet) {
+      font-size: rem(14);
+      line-height: 1.42;
+   }
 }
 .sub-title {
    font-family: $primary_font;

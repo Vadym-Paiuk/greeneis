@@ -83,8 +83,14 @@
    }
    &__main-inner {
       display: flex;
-      gap: rem(160);
-      padding-block: rem(100);
+      gap: clamp(rem(40), vw(160), rem(160));
+      padding-block: clamp(rem(24), vw(100), rem(100));
+      flex-wrap: wrap;
+      @media (max-width: $tablet) {
+         display: grid;
+         grid-template-columns: 1fr;
+         padding-bottom: rem(32);
+      }
    }
    &__content {
       flex: 0 1 rem(420);
@@ -94,6 +100,12 @@
       margin-bottom: rem(84);
       img {
          width: rem(102);
+      }
+      @media (max-width: $tablet) {
+         margin-bottom: rem(20);
+         img {
+            width: rem(53);
+         }
       }
    }
    &__info {
