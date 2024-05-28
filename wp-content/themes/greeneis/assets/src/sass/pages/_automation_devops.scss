@@ -1,0 +1,471 @@
+.content-col {
+   background-color: $green;
+
+   &__inner {
+      display: grid;
+      grid-template-columns: 1fr;
+      padding-top: rem(120);
+      padding-bottom: rem(150);
+      gap: rem(100);
+   }
+   &__header {
+      width: 100%;
+      max-width: rem(1070);
+      h2 {
+         @extend .h2;
+      }
+   }
+   &__main {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: rem(70);
+      & > p {
+         @extend .sub-title;
+      }
+   }
+
+   &__text {
+      flex: 0 1 rem(557);
+      display: flex;
+      flex-direction: column;
+      gap: rem(16);
+      p {
+         @extend .p1;
+      }
+   }
+}
+.content-col--white {
+   background-color: $gray_5;
+   color: $black;
+   .content-col__header {
+      max-width: rem(709);
+   }
+}
+.cards-dec {
+   position: relative;
+   background-color: $green;
+   &__wrapper {
+      background-color: $green_light_3;
+      padding-top: rem(200);
+      padding-bottom: rem(150);
+      clip-path: polygon(
+         59.479% 7.823%,
+         40.764% 0%,
+         11.424% 7.823%,
+         0% 0%,
+         0% 100%,
+         100% 100%,
+         100% 2.476%,
+         86.701% 0%,
+         59.479% 7.823%
+      );
+   }
+
+   &__inner {
+   }
+
+   &__header {
+      width: 100%;
+      max-width: rem(1008);
+      margin-inline: auto;
+      text-align: center;
+
+      margin-bottom: rem(128);
+   }
+
+   &__cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: rem(24);
+   }
+
+   &__card {
+      background-color: $white;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: auto;
+      gap: rem(48);
+
+      padding-block: rem(80);
+      padding-inline: rem(35);
+   }
+
+   &__card-count {
+      width: rem(80);
+      height: rem(80);
+      border-radius: 50%;
+
+      background-color: $orange;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      p {
+         @extend .h4;
+      }
+   }
+
+   &__card-main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: rem(24);
+      color: $black;
+      p {
+         @extend .h3;
+      }
+      span {
+         @extend .p1;
+         color: $gray_6;
+      }
+   }
+}
+
+.columns-cards {
+   background-color: $black_bg;
+   clip-path: polygon(0% 0%, 100% 0%, 100% 96.587%, 84.792% 93.816%, 65.243% 100%, 19.861% 93.816%, 0% 96.587%, 0% 0%);
+   position: relative;
+
+   &__inner {
+      padding-top: rem(150);
+      padding-bottom: rem(182);
+   }
+
+   &__columns {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: rem(24);
+      margin-bottom: rem(150);
+   }
+
+   &__column {
+      border: rem(1) solid $gray_dark;
+      padding: rem(48);
+      display: flex;
+      flex-direction: column;
+      gap: rem(40);
+
+      &:nth-child(2) {
+         gap: rem(104);
+      }
+   }
+
+   &__column-main {
+      display: flex;
+      flex-direction: column;
+      gap: rem(24);
+      h2 {
+         @extend .h3;
+      }
+      ul {
+         display: flex;
+         flex-direction: column;
+         gap: rem(16);
+         li {
+            display: flex;
+            align-items: center;
+            gap: rem(10);
+            img {
+               width: rem(16);
+               height: rem(16);
+            }
+            span {
+               @extend .p1;
+            }
+         }
+      }
+   }
+
+   &__column-img {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+   }
+
+   &__cards-wrapper {
+      text-align: center;
+      h2 {
+         margin-bottom: rem(100);
+      }
+   }
+
+   &__cards-inner {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      gap: rem(25);
+   }
+
+   &__card {
+      flex: 0 1 rem(410);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: rem(24);
+      padding: rem(32);
+
+      background: $back_bg_2;
+
+      span {
+         font-weight: 400;
+         font-size: rem(20);
+         line-height: 1.4;
+         letter-spacing: 0.02em;
+         text-transform: uppercase;
+      }
+
+      &:nth-child(2) {
+         margin-top: rem(82);
+      }
+   }
+
+   &__card-count {
+      width: rem(48);
+      height: rem(48);
+      border-radius: 50%;
+      background-color: $orange;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      p {
+         font-style: normal;
+         font-weight: 400;
+         font-size: rem(16);
+         line-height: 1.5;
+      }
+   }
+}
+
+.cards-list {
+   background-color: $green;
+   padding-block: rem(150);
+   position: relative;
+   &::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      bottom: 100%;
+      height: rem(400);
+      inset-inline: 0;
+      background-color: $green;
+   }
+   &__inner {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      row-gap: rem(48);
+      column-gap: rem(25);
+   }
+
+   &__item {
+      display: flex;
+      flex-direction: column;
+      gap: rem(24);
+   }
+
+   &__card-icon {
+      width: rem(48);
+      height: rem(48);
+      border-radius: 50%;
+      background-color: $orange;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img {
+         width: rem(20);
+      }
+   }
+
+   &__card-main {
+      display: flex;
+      flex-direction: column;
+      gap: rem(16);
+      padding-right: rem(26);
+      p {
+         font-size: rem(20);
+         line-height: 1.4;
+         letter-spacing: 0.02em;
+         text-transform: uppercase;
+      }
+
+      span {
+         font-family: $third_font;
+
+         font-weight: 400;
+         font-size: rem(16);
+         line-height: 1.5;
+
+         color: $white;
+
+         opacity: 0.7;
+         a {
+            color: inherit;
+            text-decoration: underline;
+            @media (any-hover: hover) {
+               &:hover {
+                  text-decoration: none;
+               }
+            }
+         }
+      }
+   }
+}
+.block-video {
+   background-color: $gray_5;
+   &__inner {
+      position: relative;
+      width: 100%;
+      height: rem(612);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &::before {
+         content: "";
+         position: absolute;
+         z-index: 3;
+         inset: 0;
+         width: 100%;
+         height: 100%;
+
+         background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+
+         pointer-events: none;
+      }
+      iframe,
+      video {
+         position: absolute;
+         inset: 0;
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+      }
+      video {
+         cursor: pointer;
+
+         z-index: 2;
+      }
+      button {
+         position: relative;
+         z-index: 4;
+         flex: 0 0 rem(100);
+         height: rem(100);
+         border-radius: 50%;
+         background-color: $orange;
+
+         border: none;
+
+         display: flex;
+         align-items: center;
+         justify-content: center;
+
+         transition: all 0.3s ease;
+         cursor: pointer;
+
+         img {
+            width: rem(16);
+            pointer-events: none;
+            position: relative;
+         }
+
+         @media (any-hover: hover) {
+            &:hover {
+               background-color: $orange_dark;
+               &::before {
+                  transform: scale(0);
+               }
+            }
+         }
+         &.hide {
+            transform: scale(0);
+            pointer-events: none;
+         }
+
+         &::before {
+            content: "";
+            position: absolute;
+            inset: rem(-15);
+            width: calc(100% + rem(30));
+            height: calc(100% + rem(30));
+            border-radius: inherit;
+            background: $orange;
+            opacity: 0.3;
+
+            transition: all 0.3s ease;
+         }
+      }
+   }
+}
+
+.cards-grid {
+   background-color: $gray_5;
+   padding-block: rem(150);
+   &__inner {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: rem(24);
+   }
+
+   &__card {
+      background-color: $white;
+      color: $black;
+
+      display: flex;
+      flex-direction: column;
+      gap: rem(24);
+
+      padding-block: rem(48);
+      padding-inline: rem(32);
+   }
+
+   &__card-icon {
+      width: rem(48);
+      height: rem(48);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 50%;
+      background-color: $orange;
+
+      img {
+         width: rem(20);
+      }
+   }
+
+   &__card-main {
+      display: flex;
+      flex-direction: column;
+      gap: rem(16);
+
+      p {
+         font-weight: 400;
+         font-size: rem(20);
+         line-height: 1.4;
+
+         letter-spacing: 0.02em;
+         text-transform: uppercase;
+         color: $black_bg;
+      }
+      span {
+         /* During mergers and acquisitions, IT leadership plays a key role. Employees are often worried about their jobs during M&A activity, so outsourcing IT leadership and support takes the pressure off already stressed employees. An outside perspective also provides unbiased decision-making and keeps IT employees focused on supporting sales, finance, marketing, operations, HR, and other departments during the transition. */
+
+         width: 564px;
+         height: 168px;
+
+         /* P2 */
+         font-family: $third_font;
+
+         font-weight: 400;
+         font-size: 16px;
+         line-height: 1.5;
+
+         color: $black_bg;
+
+         opacity: 0.7;
+      }
+   }
+}

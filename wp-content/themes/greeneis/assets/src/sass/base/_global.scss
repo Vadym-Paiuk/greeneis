@@ -6,7 +6,7 @@ html {
 	scroll-behavior: smooth;
 	font-size: vw(16);
 
-	@include media-breakpoint-down(md) {
+	@media (max-width: $tabletMedium) {
 		font-size: vwm(16);
 	}
 }
@@ -81,7 +81,7 @@ a {
 	margin: 0 auto;
 
 	@include media-breakpoint-down(md) {
-		padding: 0 rem(26);
+		padding: 0 rem(20);
 	}
 }
 

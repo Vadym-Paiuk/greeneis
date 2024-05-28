@@ -54,6 +54,44 @@ $(function () {
 
     initSlider();
 
+
+
+    function videoControlls() {
+        let videoWrap = document.querySelector('.block-video');
+        console.log('its work');
+        if (!videoWrap) return;
+        videoWrap.addEventListener('click', videoHandler)
+
+
+        function videoHandler(e) {
+            e.preventDefault();
+            let currentClick = e.target;
+            if (!checkCurrentClass(currentClick)) {
+                return;
+            }
+            let videoContainer = e.target.closest('.block-video__inner');
+            let video = videoContainer.querySelector('video');
+            let videoBtn = videoContainer.querySelector('.block-video__inner button');
+
+            if (checkCurrentClass(currentClick) && video.paused) {
+                videoBtn.classList.add('hide');
+                video.play();
+            } else if (checkCurrentClass(currentClick) && !video.paused) {
+                video.pause();
+                videoBtn.classList.remove('hide');
+            }
+
+        }
+        function checkCurrentClass(click) {
+            if (click.classList.contains('block-video__btn') || click.classList.contains('block-video__video')) {
+                return true;
+            } else return false
+
+        }
+    }
+    videoControlls();
+
+
     $(window).on('scroll', function () {
         fixedHeaderActions();
 
