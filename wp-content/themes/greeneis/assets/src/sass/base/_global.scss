@@ -112,3 +112,35 @@ a {
 	background-color: $white;
 	z-index: 500;
 }
+
+.icon-decor {
+	width: rem(48);
+	height: rem(48);
+	border-radius: 50%;
+	background-color: $orange;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	img {
+		width: rem(24);
+	}
+}
+.text-decor {
+	width: rem(48);
+	height: rem(48);
+	border-radius: 50%;
+	background-color: $orange;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	font-family: $primary_font;
+	font-style: normal;
+	font-weight: 400;
+	font-size: rem(16);
+	line-height: 1.5;
+	color: $white;
+}

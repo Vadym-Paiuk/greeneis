@@ -32,11 +32,13 @@
       gap: rem(16);
       p {
          @extend .p1;
+
+         opacity: 0.8;
       }
    }
 }
 .content-col--white {
-   background-color: $gray_5;
+   background-color: $gray_bg;
    color: $black;
    .content-col__header {
       max-width: rem(709);
@@ -315,7 +317,7 @@
    }
 }
 .block-video {
-   background-color: $gray_5;
+   background-color: $gray_bg;
    &__inner {
       position: relative;
       width: 100%;
@@ -401,7 +403,7 @@
 }
 
 .cards-grid {
-   background-color: $gray_5;
+   background-color: $gray_bg;
    padding-block: rem(150);
    &__inner {
       display: grid;
@@ -441,7 +443,7 @@
       flex-direction: column;
       gap: rem(16);
 
-      p {
+      h3 {
          font-weight: 400;
          font-size: rem(20);
          line-height: 1.4;
@@ -450,7 +452,7 @@
          text-transform: uppercase;
          color: $black_bg;
       }
-      span {
+      p {
          /* During mergers and acquisitions, IT leadership plays a key role. Employees are often worried about their jobs during M&A activity, so outsourcing IT leadership and support takes the pressure off already stressed employees. An outside perspective also provides unbiased decision-making and keeps IT employees focused on supporting sales, finance, marketing, operations, HR, and other departments during the transition. */
 
          width: 564px;
@@ -466,6 +468,396 @@
          color: $black_bg;
 
          opacity: 0.7;
+      }
+   }
+}
+
+.web-content {
+   background-color: $green;
+   isolation: isolate;
+
+   padding-top: rem(38);
+   padding-bottom: rem(150);
+
+   &__inner {
+      padding-bottom: rem(85);
+
+      display: grid;
+      grid-template-columns: rem(200) 1fr rem(200);
+      justify-content: center;
+      align-items: center;
+      // justify-items: s;
+   }
+
+   &__items {
+      display: flex;
+      flex-direction: column;
+      gap: rem(46);
+      align-items: center;
+      justify-content: center;
+
+      &:nth-child(1) {
+         .web-content__modal {
+            left: 0;
+         }
+      }
+      &:nth-child(3) {
+         .web-content__modal {
+            left: initial;
+            right: 0;
+         }
+      }
+   }
+
+   &__item {
+      position: relative;
+   }
+
+   &__item-btn {
+      background-color: transparent;
+      border: none;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: rem(9);
+      padding: 0;
+      cursor: pointer;
+
+      & > * {
+         pointer-events: none;
+      }
+      p {
+         font-family: $primary_font;
+         font-weight: 400;
+         font-size: rem(16);
+         line-height: 1.5;
+         text-align: center;
+         letter-spacing: rem(2);
+
+         text-transform: uppercase;
+         color: $white;
+      }
+      &:focus-within {
+         & ~ .web-content__modal {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: all;
+         }
+      }
+      @media (any-hover: hover) {
+         &:hover {
+            .web-content__item-icon {
+               background-color: $gray_dark;
+            }
+         }
+      }
+   }
+
+   &__item-icon {
+      width: rem(96);
+      height: rem(96);
+      border-radius: rem(16);
+      background-color: $gray_7;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      transition: all 0.3s ease;
+
+      img {
+         width: rem(44);
+      }
+   }
+
+   &__modal {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background-color: $white;
+      border-radius: rem(16);
+      padding: rem(16);
+
+      display: flex;
+      flex-direction: column;
+      gap: rem(16);
+      min-width: rem(400);
+      min-height: rem(172);
+
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+   }
+
+   &__modal-header {
+      display: flex;
+      align-items: center;
+      gap: rem(8);
+
+      p {
+         font-family: $primary_font;
+         font-style: normal;
+         font-weight: 400;
+         font-size: rem(16);
+         line-height: 1.5;
+         letter-spacing: rem(2);
+         text-transform: uppercase;
+
+         color: $black_bg;
+      }
+   }
+
+   &__modal-icon {
+      img {
+         width: rem(24);
+      }
+   }
+
+   &__modal-text {
+      p {
+         @extend .p3;
+         color: $black_bg_3;
+         line-height: 1.43;
+      }
+   }
+
+   &__middle {
+      align-self: stretch;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      position: relative;
+   }
+   &__middle-inner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      position: relative;
+      background-color: $black_3;
+      border-radius: 50%;
+
+      width: rem(292);
+      height: rem(292);
+   }
+   &__img-web {
+      position: absolute;
+      z-index: -1;
+      inset: 0;
+      inset-inline: rem(-52);
+      width: calc(100% + rem(104));
+      height: 100%;
+
+      img {
+         position: absolute;
+         top: rem(103);
+         inset-inline: 0;
+         width: 100%;
+         object-fit: cover;
+      }
+   }
+   &__middle-img {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img {
+         width: rem(102);
+      }
+   }
+
+   &__middle-border {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0.5;
+      img {
+         position: absolute;
+         inset: 0;
+         width: 100%;
+         height: 100%;
+      }
+   }
+}
+
+.card-steps {
+   background-color: $gray_bg;
+   color: $black;
+   &__inner {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: rem(24);
+      padding-bottom: rem(120);
+   }
+
+   &__card {
+      clip-path: polygon(
+         0% 5.34%,
+         20.135% 0%,
+         61.175% 7.787%,
+         86.031% 3.115%,
+         100% 4.918%,
+         100% 100%,
+         0% 100%,
+         0% 5.34%
+      );
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: rem(48);
+      height: auto;
+
+      padding-top: rem(110);
+      padding-bottom: rem(51);
+      padding-inline: rem(33);
+      background-color: $white;
+   }
+
+   &__card-count {
+      width: rem(80);
+      height: rem(80);
+      border-radius: 50%;
+      background-color: $orange;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      @extend .h4;
+      color: $white;
+   }
+
+   &__card-main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: rem(24);
+
+      p {
+         color: $black_4;
+         a {
+            color: inherit;
+            text-decoration: underline;
+
+            @media (any-hover: hover) {
+               &:hover {
+                  text-decoration: none;
+               }
+            }
+         }
+      }
+   }
+}
+
+.cards-info {
+   background-color: $green;
+   padding-block: rem(150);
+   &__inner {
+      h2 {
+         color: $white;
+         margin-bottom: rem(100);
+      }
+   }
+
+   &__cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: rem(24);
+   }
+
+   &__card {
+      background-color: $white;
+      padding-inline: rem(32);
+      padding-block: rem(48);
+      display: flex;
+      flex-direction: column;
+      height: auto;
+      gap: rem(24);
+
+      min-height: rem(224);
+      p {
+         font-family: $primary_font;
+         font-weight: 400;
+         font-size: rem(20);
+         line-height: 1.4;
+
+         letter-spacing: 0.02em;
+         text-transform: uppercase;
+
+         color: $black;
+      }
+   }
+}
+
+.list-grid {
+   background-color: $gray_bg;
+   padding-block: rem(150);
+   &__inner {
+      h2 {
+         color: $black;
+         margin-bottom: rem(100);
+      }
+   }
+
+   &__grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: rem(60);
+      row-gap: rem(48);
+   }
+
+   &__item {
+      display: flex;
+      flex-direction: column;
+      gap: rem(24);
+   }
+
+   &__item-icon {
+   }
+
+   &__item-main {
+      display: flex;
+      flex-direction: column;
+      gap: rem(16);
+
+      h4 {
+         @extend .capture;
+      }
+
+      ul {
+         display: flex;
+         flex-direction: column;
+         gap: rem(16);
+
+         li {
+            position: relative;
+            padding-inline-start: rem(28);
+            &::before {
+               content: "";
+               position: absolute;
+               top: 0.25em;
+               left: 0;
+               width: rem(16);
+               height: rem(16);
+               border-radius: 50%;
+               background-image: url("../images/icons/check.svg");
+               background-position: center;
+               background-repeat: no-repeat;
+               background-size: cover;
+            }
+         }
+      }
+
+      p,
+      li,
+      a {
+         @extend .p1;
+         color: $gray;
       }
    }
 }

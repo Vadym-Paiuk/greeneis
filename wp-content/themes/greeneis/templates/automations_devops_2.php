@@ -65,9 +65,9 @@
                <img  src="<?php echo $path;?>/assets/src/images/icons/cards-grid-1.svg" alt="" loading="lazy">
             </div>
             <div class="cards-grid__card-main">
-               <p>IT Leadership and Support</p>
-               <span>During mergers and acquisitions,
-               IT leadership plays a key role. Employees are often worried about their jobs during M&A activity, so outsourcing IT leadership and support takes the pressure off already stressed employees. An outside perspective also provides unbiased decision-making and keeps IT employees focused on supporting sales, finance, marketing, operations, HR, and other departments during the transition.</span>
+               <h3>IT Leadership and Support</h3>
+               <p>During mergers and acquisitions,
+               IT leadership plays a key role. Employees are often worried about their jobs during M&A activity, so outsourcing IT leadership and support takes the pressure off already stressed employees. An outside perspective also provides unbiased decision-making and keeps IT employees focused on supporting sales, finance, marketing, operations, HR, and other departments during the transition.</p>
             </div>
          </div>
          <div class="cards-grid__card">
@@ -75,9 +75,9 @@
                <img  src="<?php echo $path;?>/assets/src/images/icons/cards-grid-2.svg" alt="" loading="lazy">
             </div>
             <div class="cards-grid__card-main">
-               <p>Data Analytics</p>
-               <span>Data analytics can play a crucial role in M&A activity, by transforming raw data into useful insights. A company being acquired may be sitting on a wealth of untapped data waiting for the right partner
-               to leverage it. GREENE IS uses cutting-edge tools to analyze your data from anywhere.</span>
+               <h3>Data Analytics</h3>
+               <p>Data analytics can play a crucial role in M&A activity, by transforming raw data into useful insights. A company being acquired may be sitting on a wealth of untapped data waiting for the right partner
+               to leverage it. GREENE IS uses cutting-edge tools to analyze your data from anywhere.</p>
             </div>
          </div>
          <div class="cards-grid__card">
@@ -85,8 +85,8 @@
                <img  src="<?php echo $path;?>/assets/src/images/icons/cards-grid-3.svg" alt="" loading="lazy">
             </div>
             <div class="cards-grid__card-main">
-               <p>System Migration</p>
-               <span>Executing system and data migration are one of the most challenging aspects of mergers and acquisitions. Working backward from the end goal helps prioritize the most efficient design for system and data migration. This includes understanding where and how email, business applications, files, and other assets are stored, accessed, and used. Greene IS analyzes the situation and makes recommendations for the most beneficial process.</span>
+               <h3>System Migration</h3>
+               <p>Executing system and data migration are one of the most challenging aspects of mergers and acquisitions. Working backward from the end goal helps prioritize the most efficient design for system and data migration. This includes understanding where and how email, business applications, files, and other assets are stored, accessed, and used. Greene IS analyzes the situation and makes recommendations for the most beneficial process.</p>
             </div>
          </div>
          <div class="cards-grid__card">
@@ -94,9 +94,9 @@
                <img  src="<?php echo $path;?>/assets/src/images/icons/cards-grid-4.svg" alt="" loading="lazy">
             </div>
             <div class="cards-grid__card-main">
-               <p>System Integration</p>
-               <span>System integration is also tied to the business goals behind M&A
-               activity. Planning and executing system integration can be a daunting task, especially when companies have different infrastructures, security policies, and network capabilities. Greene IS can help you integrate your systems and ensure that they are aligned with your business goals.</span>
+               <h3>System Integration</h3>
+               <p>System integration is also tied to the business goals behind M&A
+               activity. Planning and executing system integration can be a daunting task, especially when companies have different infrastructures, security policies, and network capabilities. Greene IS can help you integrate your systems and ensure that they are aligned with your business goals.</p>
             </div>
          </div>
       </div>

@@ -1,0 +1,112 @@
+.cards-dark {
+   background-color: $gray_bg;
+   padding-bottom: rem(150);
+   &__inner {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: rem(24);
+   }
+
+   &__card {
+      background-color: $back_bg_2;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: auto;
+      gap: rem(24);
+
+      padding-block: rem(32);
+      padding-inline: rem(24);
+
+      p {
+         @extend .capture;
+         color: $white;
+      }
+   }
+}
+
+.list-info {
+   background-color: $green;
+   padding-top: rem(150);
+   padding-bottom: rem(240);
+
+   clip-path: polygon(0% 0%, 100% 0%, 100% 91.228%, 82.118% 100%, 42.014% 91.228%, 28.542% 95.712%, 0% 91.228%, 0% 0%);
+
+   &__header {
+      width: 100%;
+      max-width: rem(883);
+      margin-bottom: rem(100);
+
+      h2 {
+         color: $white;
+      }
+   }
+
+   &__list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      row-gap: rem(48);
+      column-gap: rem(25);
+   }
+
+   &__item {
+      display: flex;
+      flex-direction: column;
+      height: auto;
+      gap: rem(24);
+   }
+
+   &__item-main {
+      display: flex;
+      flex-direction: column;
+      gap: rem(16);
+
+      width: 100%;
+      max-width: rem(328);
+      h3 {
+         @extend .capture;
+         color: $white;
+      }
+      p {
+         @extend .p2;
+         color: $white_2;
+      }
+   }
+}
+
+.cards-grid-content {
+   padding-bottom: rem(198);
+   padding-top: rem(60);
+   &__inner {
+   }
+
+   &__header {
+      width: 100%;
+      max-width: rem(883);
+      margin-bottom: rem(100);
+      h2 {
+         color: $black_bg;
+      }
+   }
+
+   &__grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: rem(24);
+   }
+   .cards-grid__card {
+      background: rgba(205, 210, 205, 0.3);
+   }
+}
+
+.cards-grid {
+   &__card {
+   }
+
+   &__card-icon {
+   }
+
+   &__card-main {
+   }
+}
