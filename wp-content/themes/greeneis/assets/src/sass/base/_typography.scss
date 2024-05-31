@@ -86,3 +86,17 @@ p,
       background-color: $orange;
    }
 }
+.capture {
+   font-family: $primary_font;
+   font-style: normal;
+   font-weight: 400;
+   font-size: rem(20);
+   line-height: 1.4;
+
+   display: flex;
+   align-items: center;
+   letter-spacing: 0.02em;
+   text-transform: uppercase;
+
+   color: $black_bg;
+}
