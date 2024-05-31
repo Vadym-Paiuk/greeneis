@@ -1,9 +1,8 @@
 <?php
 get_header();
 $path          = get_template_directory_uri();
-$blog_page_id  = get_option( 'page_for_posts' );
-$blog_page_url = get_permalink( $blog_page_id );
-$section       = get_field( 'hero', $blog_page_id );
+$blog_page_url = get_post_type_archive_link( 'event' );
+$section       = get_field( 'archive_events', 'options' );
 ?>
 	
 	<section class="site-archive">
@@ -28,13 +27,13 @@ $section       = get_field( 'hero', $blog_page_id );
 						<?php endif; ?>
 					</div>
 					<div class="site-archive__cats">
-						<a class="<?php if ( is_home() ) {
+						<a class="<?php if ( is_archive() ) {
 							echo 'active';
 						} ?>"
 						   href="<?php echo $blog_page_url; ?>">All</a>
 						<?php
 						$categories = get_terms( array(
-							'taxonomy'   => 'category',
+							'taxonomy'   => 'event_cat',
 							'hide_empty' => true,
 						) );
 						
@@ -50,11 +49,11 @@ $section       = get_field( 'hero', $blog_page_id );
 						?>
 					</div>
 				</div>
-				<div class="site-archive__cards site-archive__cards--grid post-container">
+				<div class="site-archive__cards site-archive__cards--grid-2 post-container">
 					<?php if ( have_posts() ) : ?>
 						<?php while ( have_posts() ) :
 							the_post(); ?>
-							<?php get_template_part( 'parts/global/post' ); ?>
+							<?php get_template_part( 'parts/global/event' ); ?>
 						<?php endwhile; ?>
 					<?php else : ?>
 						<p><?php esc_html_e( 'Sorry, no posts matched your criteria.' ); ?></p>

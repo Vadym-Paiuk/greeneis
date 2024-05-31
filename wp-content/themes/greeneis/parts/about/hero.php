@@ -7,21 +7,20 @@ if ( empty( $section ) ) {
 }
 ?>
 
-<section class="hero">
-	<div class="hero__bg">
-		<!-- <img  src="<?php echo $path; ?>/assets/src/images/home/hero.jpg" alt="" loading="lazy"> -->
-		<?php if ( ! empty( $section['video'] ) ): ?>
-			<video src="<?php echo $section['video']['url']; ?>"
-			       muted=""
-			       loop="true"
-			       autoplay=""
-			       preload="  "
-			       poster=""></video>
-		<?php endif; ?>
-	</div>
-	<div class="cotainer">
-		<div class="hero__inner">
-			<div class="hero__content">
+<section class="hero-type-2">
+	<?php if ( ! empty( $section['image'] ) ): ?>
+		<div class="hero-type-2__bg">
+			<?php echo wp_get_attachment_image( $section['image'], 'full' ); ?>
+		</div>
+		<div class="hero-type-2__dec">
+			<img src="<?php echo $path; ?>/assets/src/images/icons/web-2.svg"
+			     alt="web"
+			     loading="lazy">
+		</div>
+	<?php endif; ?>
+	<div class="container">
+		<div class="hero-type-2__inner">
+			<div class="hero-type-2__content">
 				<?php if ( ! empty( $section['title'] ) ): ?>
 					<h1>
 						<?php echo $section['title']; ?>
