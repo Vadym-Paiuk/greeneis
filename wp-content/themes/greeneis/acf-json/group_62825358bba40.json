@@ -1,0 +1,85 @@
+{
+    "key": "group_62825358bba40",
+    "title": "Page Settings",
+    "fields": [
+        {
+            "key": "field_628f8f12a8317",
+            "label": "Icon",
+            "name": "icon",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "To include an icon for this page in Hero and Services blocks, find the icon in the <a href=\"https:\/\/carbondesignsystem.com\/guidelines\/icons\/library\/\" target=\"_blank\">Carbon Design System icon library<\/a>. Hover over the icon's copy button to see its name, and enter that name here (lowercase with hyphens between words).<br \/><br \/>For example, if the copy snippet is <IbmCloudVpcEndpoints32 \/> you would enter ibm-cloud-vpc-endpoints.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_628d167b030b0",
+            "label": "About Block",
+            "name": "hide_about_block",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Hide the <a href=\"\/wp-admin\/admin.php?page=blocks\" target=\"_blank\">about block<\/a> at the bottom of the page?",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_62825364cd079",
+            "label": "Contact Block",
+            "name": "hide_contact_block",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Hide the <a href=\"\/wp-admin\/admin.php?page=blocks\" target=\"_blank\">contact form block<\/a> at the bottom of the page?",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": false,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1716972375
+}

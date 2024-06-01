@@ -1,26 +1,13 @@
-<?php get_header(); 
-   //Template name: Front page
-   $path = get_template_directory_uri();
-?>
+<?php
+get_header();
 
-<section class="hero">
-   <div class="hero__bg">
-      <!-- <img  src="<?php echo $path;?>/assets/src/images/home/hero.jpg" alt="" loading="lazy"> -->
-      <video src="<?php echo $path;?>/assets/src/images/video.mp4" muted="" loop="true" autoplay="" preload="  " poster=""></video>
-   </div>
-   <div class="cotainer">
-      <div class="hero__inner">
-         <div class="hero__content">
-            <h1>Navigate Your Technology Summit</h1>
-            <p>
-               Our mission is to simplify your experience with technology by developing creative
-               solutions to expertly navigate your technology summit.
-            </p>
-            <a href="#" class="btn">Let's Talk</a>
-         </div>
-      </div>
-   </div>
-</section>
+get_template_part( 'parts/home/hero' );
+get_template_part( 'parts/home/intro' );
+get_template_part( 'parts/home/services' );
+get_template_part( 'parts/home/about' );
+get_template_part( 'parts/home/blog' );
+get_template_part( 'parts/home/newsletter' );
+
 
 <section class="section-content">
    <div class="container">
@@ -336,3 +323,6 @@
 </section>
 
 <?php get_footer(); ?>
+
+get_footer();
+
