@@ -53,8 +53,7 @@ $(function () {
     }
 
     initSlider();
-
-
+    Fancybox.bind();
 
     function videoControlls() {
         let videoWrap = document.querySelector('.block-video');

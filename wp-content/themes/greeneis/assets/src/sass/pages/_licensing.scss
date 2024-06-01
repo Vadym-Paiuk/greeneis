@@ -1,0 +1,166 @@
+.content-additional {
+   background-color: $gray_bg;
+   padding-bottom: rem(150);
+   &__inner {
+      display: flex;
+      justify-content: space-between;
+   }
+
+   &__content {
+      display: flex;
+      flex-direction: column;
+      gap: rem(32);
+      flex: 0 1 rem(543);
+      color: $black;
+
+      h3 {
+      }
+      p {
+         color: $black_4;
+      }
+   }
+
+   &__img-wrap {
+      flex: 0 1 rem(410);
+      display: flex;
+      gap: rem(60);
+      flex-direction: column;
+      gap: rem(32);
+
+      p {
+         color: $black_4;
+      }
+   }
+
+   &__img {
+      width: rem(410);
+      height: rem(308);
+      position: relative;
+
+      img {
+         position: absolute;
+         inset: 0;
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+      }
+   }
+}
+
+.content-steps {
+   padding-block: rem(150);
+   &__inner {
+      display: flex;
+      flex-direction: column;
+      gap: rem(100);
+   }
+
+   &__header {
+      text-align: center;
+      width: 100%;
+      max-width: rem(490);
+      margin-inline: auto;
+      h2 {
+         color: $black;
+      }
+   }
+
+   &__cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: rem(24);
+   }
+
+   &__item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: rem(24);
+   }
+
+   &__item-count {
+      background-color: $green;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 50%;
+      width: rem(80);
+      height: rem(80);
+
+      p {
+         @extend .h4;
+         color: $white;
+      }
+   }
+
+   &__item-main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: rem(16);
+
+      h3 {
+         @extend .capture;
+      }
+      p {
+         @extend .p2;
+         color: $black_3;
+      }
+   }
+}
+
+.list-desc {
+   background-color: $black_bg;
+   padding-block: rem(150);
+
+   &__inner {
+      display: flex;
+      flex-direction: column;
+      gap: rem(100);
+      h2 {
+         color: $white;
+      }
+   }
+
+   &__items {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+   }
+
+   &__item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: rem(24);
+      padding-inline: rem(24);
+
+      p {
+         @extend .capture;
+         color: $white;
+      }
+      &:not(:last-child) {
+         border-right: rem(1) solid $gray;
+      }
+   }
+
+   &__item-icon {
+      width: rem(48);
+      height: rem(48);
+      background-color: $orange;
+
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+         width: rem(24);
+      }
+   }
+}
+.container {
+}
