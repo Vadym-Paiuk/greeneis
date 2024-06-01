@@ -106,13 +106,13 @@
          </div>
       </div>
    </section>
-   <div class="card-modal" id="dialog-content" style="display:none;max-width:500px;">
+   <div class="card-modal" id="dialog-content" style="display:none;max-width:788px;">
       <div class="card-modal__inner">
-         <div class="hard-modal__header">
-            <h3>Registration for a social event</h3>
+         <div class="card-modal__header">
+            <h2>Registration for a social event</h2>
             <p>Pull up a barstool and get to know us</p>
          </div>
-         <div class="card-modal__form form">
+         <div class="card-modal__form form ">
                   <form method="post" enctype="multipart/form-data" target="gform_ajax_frame_2" id="gform_2" action="/#gf_2" data-formid="2" novalidate="">
                      <div class="gform-body gform_body">
                         <div id="gform_fields_2" class="gform_fields top_label form_sublabel_below description_below validation_below">
@@ -135,7 +135,7 @@
 
                         </div>
                      </div>
-                     <div class="gform_footer top_label"> <input type="submit" id="gform_submit_button_2" class="gform_button button" value="Let’s talk"
+                     <div class="gform_footer top_label"> <input type="submit" id="gform_submit_button_2" class="gform_button button" value="Registrate"
                            onclick="if(window[&quot;gf_submitting_2&quot;]){return false;}  if( !jQuery(&quot;#gform_2&quot;)[0].checkValidity || jQuery(&quot;#gform_2&quot;)[0].checkValidity()){window[&quot;gf_submitting_2&quot;]=true;}  "
                            onkeypress="if( event.keyCode == 13 ){ if(window[&quot;gf_submitting_2&quot;]){return false;} if( !jQuery(&quot;#gform_2&quot;)[0].checkValidity || jQuery(&quot;#gform_2&quot;)[0].checkValidity()){window[&quot;gf_submitting_2&quot;]=true;}  jQuery(&quot;#gform_2&quot;).trigger(&quot;submit&quot;,[true]); }">
                         <input type="hidden" name="gform_ajax" value="form_id=2&amp;title=1&amp;description=&amp;tabindex=0&amp;theme=gravity-theme">

@@ -32,7 +32,6 @@
       align-items: flex-start;
       gap: rem(24);
 
-
       flex: 0 1 rem(635);
 
       color: $black_bg;
@@ -112,8 +111,8 @@
    .card-location {
       background-color: $white;
    }
-   .card{
-      &__content{
+   .card {
+      &__content {
          width: 100%;
          max-width: rem(411);
       }
@@ -163,6 +162,37 @@
          &:hover {
             color: $orange_dark;
             text-decoration: underline;
+         }
+      }
+   }
+}
+.card-modal {
+   padding-block: rem(100);
+   padding-inline: rem(80);
+   background-color: $back_bg_2;
+   &__header {
+      display: flex;
+      flex-direction: column;
+      gap: rem(24);
+      color: $white;
+
+      p {
+         color: $white_bg;
+      }
+   }
+   &__inner {
+      display: flex;
+      flex-direction: column;
+      gap: rem(48);
+      width: 100%;
+      max-width: rem(628);
+   }
+   &__form {
+      form {
+         .gform_fields {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: rem(24);
          }
       }
    }
