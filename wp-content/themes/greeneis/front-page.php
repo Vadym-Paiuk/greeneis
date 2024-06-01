@@ -286,7 +286,7 @@
    </div>
 </section>
 
-<section class="subscribe">
+<section class="subscribe ">
    <div class="container">
       <div class="subscribe__inner">
          <div class="subscribe__form-wrap">

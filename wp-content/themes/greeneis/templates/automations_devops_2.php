@@ -26,7 +26,7 @@
 </section>
 
 
-<section class="content-col content-col--white">
+<section class="content-col content-col--gray">
    <div class="container">
       <div class="content-col__inner">
          <div class="content-col__header">

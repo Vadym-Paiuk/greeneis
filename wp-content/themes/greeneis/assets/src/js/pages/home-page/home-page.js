@@ -53,9 +53,9 @@ $(function () {
     }
 
     initSlider();
+    Fancybox.bind();
 
-
-
+    Fancybox.show([{ src: "#dialog-content", type: "inline" }]);
     function videoControlls() {
         let videoWrap = document.querySelector('.block-video');
         console.log('its work');

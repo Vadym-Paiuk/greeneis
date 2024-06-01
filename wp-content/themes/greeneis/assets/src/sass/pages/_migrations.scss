@@ -1,0 +1,107 @@
+.process {
+   padding-bottom: rem(140);
+   &__inner {
+      img {
+         height: rem(712);
+      }
+   }
+}
+
+.content-list {
+   background-color: $green;
+   padding-top: rem(15);
+   padding-bottom: rem(150);
+   &__inner {
+      display: flex;
+      flex-direction: column;
+      gap: rem(100);
+   }
+
+   &__header {
+      display: flex;
+      flex-direction: column;
+      gap: rem(24);
+      width: 100%;
+      max-width: rem(1023);
+
+      p {
+         @extend .sub-title;
+      }
+      h2 {
+         color: $white;
+      }
+   }
+
+   &__lists {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: rem(61);
+   }
+
+   &__item {
+      display: flex;
+      flex-direction: column;
+      gap: rem(32);
+
+      &:not(:last-child) {
+         position: relative;
+
+         &::after {
+            content: "";
+            position: absolute;
+            right: rem(-30);
+            top: 0;
+            bottom: 0;
+            width: rem(1);
+            background-color: $gray
+         }
+      }
+   }
+
+   &__item-capture {
+      p {
+         @extend .capture;
+         color: $white;
+      }
+   }
+   &__item-content {
+      display: flex;
+      flex-direction: column;
+      gap: rem(16);
+      @extend .p2;
+      color: $white_2;
+
+      a {
+         color: inherit;
+      }
+      ul {
+         display: flex;
+         flex-direction: column;
+         gap: rem(16);
+
+         li {
+            padding-inline-start: rem(26);
+
+            position: relative;
+
+            &::before {
+               content: "";
+               position: absolute;
+               top: 50%;
+               inset-inline-start: 0;
+               transform: translateY(-50%);
+               width: rem(14);
+               height: rem(14);
+               border-radius: 50%;
+
+               background-image: url("../images/icons/check.svg");
+               background-position: center;
+               background-repeat: no-repeat;
+               background-size: cover;
+            }
+         }
+      }
+   }
+}
+.container {
+}

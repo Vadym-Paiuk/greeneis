@@ -37,11 +37,24 @@
       }
    }
 }
-.content-col--white {
+.content-col--gray {
    background-color: $gray_bg;
    color: $black;
    .content-col__header {
       max-width: rem(709);
+   }
+}
+.content-col--wide {
+   .content-col__header {
+      max-width: rem(922);
+   }
+}
+.content-col--white {
+   background-color: $white;
+
+   color: $black;
+   .content-col__header {
+      max-width: rem(922);
    }
 }
 .cards-dec {
@@ -453,20 +466,7 @@
          color: $black_bg;
       }
       p {
-         /* During mergers and acquisitions, IT leadership plays a key role. Employees are often worried about their jobs during M&A activity, so outsourcing IT leadership and support takes the pressure off already stressed employees. An outside perspective also provides unbiased decision-making and keeps IT employees focused on supporting sales, finance, marketing, operations, HR, and other departments during the transition. */
-
-         width: 564px;
-         height: 168px;
-
-         /* P2 */
-         font-family: $third_font;
-
-         font-weight: 400;
-         font-size: 16px;
-         line-height: 1.5;
-
-         color: $black_bg;
-
+         @extend .p2;
          opacity: 0.7;
       }
    }
