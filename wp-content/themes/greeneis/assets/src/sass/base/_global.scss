@@ -5,7 +5,7 @@
 html {
 	scroll-behavior: smooth;
 	font-size: vw(16);
-
+	
 	@media (max-width: $tabletMedium) {
 		font-size: vwm(16);
 	}
@@ -27,7 +27,7 @@ body {
 	line-height: 1.5;
 	min-width: rem(320);
 	overflow-x: hidden;
-
+	
 	background-color: $white;
 	color: $white;
 }
@@ -59,7 +59,7 @@ body {
 main {
 	position: relative;
 	flex: 1;
-
+	
 	& > :first-child {
 		padding-top: rem(112);
 	}
@@ -79,7 +79,7 @@ a {
 	max-width: rem(1280);
 	width: 100%;
 	margin: 0 auto;
-
+	
 	@include media-breakpoint-down(md) {
 		padding: 0 rem(20);
 	}
@@ -94,7 +94,7 @@ a {
 	font-size: rem(40);
 	text-align: center;
 	color: #6b8ff7;
-
+	
 	@include media-breakpoint-down(md) {
 		font-size: rem(20);
 	}
@@ -108,6 +108,10 @@ a {
 	overflow: hidden;
 }
 
+.hidden {
+	display: none !important;
+}
+
 .bg-loadingoverlay {
 	background-color: $white;
 	z-index: 500;
@@ -118,25 +122,26 @@ a {
 	height: rem(48);
 	border-radius: 50%;
 	background-color: $orange;
-
+	
 	display: flex;
 	align-items: center;
 	justify-content: center;
-
+	
 	img {
 		width: rem(24);
 	}
 }
+
 .text-decor {
 	width: rem(48);
 	height: rem(48);
 	border-radius: 50%;
 	background-color: $orange;
-
+	
 	display: flex;
 	align-items: center;
 	justify-content: center;
-
+	
 	font-family: $primary_font;
 	font-style: normal;
 	font-weight: 400;
