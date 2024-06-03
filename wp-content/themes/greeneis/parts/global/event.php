@@ -29,9 +29,7 @@
 											<?php echo get_the_excerpt(); ?>
 										</span>
 		</div>
-		<a href=""
-		   class="card__btn btn--transparent event-modal"
-		   data-fancybox
-		   data-src="#dialog-content">Registrate</a>
+		<a href="<?php the_permalink(); ?>"
+		   class="card__btn btn--transparent">Registrate</a>
 	</div>
 </article>

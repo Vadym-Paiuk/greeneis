@@ -19,42 +19,32 @@ if ( empty( $section ) ) {
 			</div>
 			<?php if ( ! empty( $section['team_list'] ) ): ?>
 				<div class="our-team__main">
-					<div class="our-team__slider swiper">
-						<div class="our-team__wrapper swiper-wrapper">
-
-							<?php foreach ( $section['team_list'] as $key => $member ): ?>
-									<div class="our-team__slide swiper-slide">
-																<a href="#"
-									class="our-team__card <?php if ( $key > 11 ) {
-										echo 'hidden';
-									} ?>">
-											<span class="our-team__card-img">
-										<?php
-										if ( ! empty( $member['image'] ) ) {
-											echo wp_get_attachment_image( $member['image'], 'full' );
-										}
-										?>
-											</span>
-									<div class="our-team__card-main">
-										<?php if ( ! empty( $member['name'] ) ): ?>
-											<span class="our-team__card-title">
-														<?php echo $member['name']; ?>
-													</span>
-										<?php endif; ?>
-										<?php if ( ! empty( $member['position'] ) ): ?>
-											<div class="our-team__card-desc">
-												<?php echo $member['position']; ?>
-											</div>
-										<?php endif; ?>
+					<?php foreach ( $section['team_list'] as $key => $member ): ?>
+						<a href="#"
+						   class="our-team__card <?php if ( $key > 11 ) {
+							   echo 'hidden';
+						   } ?>">
+                            <span class="our-team__card-img">
+								<?php
+								if ( ! empty( $member['image'] ) ) {
+									echo wp_get_attachment_image( $member['image'], 'full' );
+								}
+								?>
+                            </span>
+							<div class="our-team__card-main">
+								<?php if ( ! empty( $member['name'] ) ): ?>
+									<span class="our-team__card-title">
+	                                  <?php echo $member['name']; ?>
+                                  </span>
+								<?php endif; ?>
+								<?php if ( ! empty( $member['position'] ) ): ?>
+									<div class="our-team__card-desc">
+										<?php echo $member['position']; ?>
 									</div>
-								</a>
-									</div>
-
-
-							<?php endforeach; ?>
-						</div>
-						<div class="swiper-pagination"></div>
-					</div>
+								<?php endif; ?>
+							</div>
+						</a>
+					<?php endforeach; ?>
 				</div>
 				<?php if ( count( $section['team_list'] ) > 12 ): ?>
 					<a href=""

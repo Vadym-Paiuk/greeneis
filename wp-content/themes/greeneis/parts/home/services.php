@@ -27,38 +27,29 @@ if ( empty( $section ) ) {
 		</div>
 		<?php if ( ! empty( $section['services_list'] ) ): ?>
 			<div class="cards-content__cards">
-				<div class="cards-content__slider swiper">
-					<div class="cards-content__wrapper swiper-wrapper">
-						<?php foreach ( $section['services_list'] as $key => $service ): ?>
-							<div class="cards-content__slide swiper-slide">
-								<div class="cards-content__card">
-									<div class="cards-content__card-header">
-										<span><?php echo $key + 1; ?></span>
-										<?php if ( ! empty( $service['title'] ) ): ?>
-											<p>
-												<?php echo $service['title']; ?>
-											</p>
-										<?php endif; ?>
-									</div>
-									<div class="cards-content__card-text">
-										<?php if ( ! empty( $service['description'] ) ): ?>
-											<p>
-												<?php echo $service['description']; ?>
-											</p>
-										<?php endif; ?>
-									</div>
-									<?php if ( ! empty( $service['link'] ) ): ?>
-										<a class="cards-content__card-link btn--transparent"
-											href="<?php echo $service['link']; ?>">Learn more</a>
-									<?php endif; ?>
-								</div>
-							</div>
-						<?php endforeach; ?>
+				<?php foreach ( $section['services_list'] as $key => $service ): ?>
+					<div class="cards-content__card">
+						<div class="cards-content__card-header">
+							<span><?php echo $key + 1; ?></span>
+							<?php if ( ! empty( $service['title'] ) ): ?>
+								<p>
+									<?php echo $service['title']; ?>
+								</p>
+							<?php endif; ?>
+						</div>
+						<div class="cards-content__card-text">
+							<?php if ( ! empty( $service['description'] ) ): ?>
+								<p>
+									<?php echo $service['description']; ?>
+								</p>
+							<?php endif; ?>
+						</div>
+						<?php if ( ! empty( $service['link'] ) ): ?>
+							<a class="cards-content__card-link btn--transparent"
+							   href="<?php echo $service['link']; ?>">Learn more</a>
+						<?php endif; ?>
 					</div>
-					<div class="swiper-pagination"></div>
-
-				</div>
-
+				<?php endforeach; ?>
 			</div>
 		<?php endif; ?>
 	</div>

@@ -71,8 +71,4 @@ $section       = get_field( 'archive_events', 'options' );
 		</div>
 	</section>
 
-
-<?php
-get_template_part( 'parts/global/event-modal' );
-get_footer();
-?>
+<?php get_footer(); ?>

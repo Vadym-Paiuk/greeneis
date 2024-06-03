@@ -38,6 +38,9 @@ $path = get_template_directory_uri();
 	<div class="container">
 		<div class="header__inner">
 			<div class="header__logo">
+				<a href="<?php echo home_url();?>">
+					<img class="header__logo-white"  src="<?php echo $path;?>/assets/src/images/icons/logo.svg" alt="" loading="lazy">
+				</a>
 				<?php echo get_custom_logo(); ?>
 			</div>
 			<div class="header__menu">
@@ -75,6 +78,7 @@ $path = get_template_directory_uri();
 				<?php endif; ?>
 			</div>
 
+			<a class="btn" href="#" >Get Started</a>
 			<button class="header__btn-burger btn-burger">
             <span></span>
             <span></span>
