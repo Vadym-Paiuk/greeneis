@@ -132,15 +132,12 @@
          text-align: center;
       }
    }
-
-   .custom-logo-link {
+   &__logo {
       display: block;
       margin-bottom: rem(84);
-
       img {
          width: rem(102);
       }
-
       @media (max-width: $tablet) {
          margin-bottom: rem(20);
          img {
@@ -254,18 +251,18 @@
       justify-content: space-between;
       align-items: center;
 
-      padding-block: clamp(rem(24), vw(38), rem(38));
+      padding-block: clamp(rem(24),vw(38),rem(38));
       p {
          @extend .p2;
          color: $gray_4;
       }
-      @media (max-width: $tablet) {
+      @media(max-width:$tablet){
          display: grid;
          grid-template-columns: 1fr;
          justify-items: center;
          text-align: center;
          gap: rem(16);
-         p {
+         p{
             order: 1;
             font-size: rem(12);
          }

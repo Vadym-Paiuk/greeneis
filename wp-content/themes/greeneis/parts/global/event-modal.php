@@ -4,7 +4,7 @@ $modal = get_field( 'archive_events', 'options' )['modal'];
 
 <div class="card-modal"
      id="dialog-content"
-     style="display:none;max-width:788px;">
+     style="display:none;">
 	<div class="card-modal__inner">
 		<div class="card-modal__header">
 			<?php if ( ! empty( $modal['title'] ) ): ?>
