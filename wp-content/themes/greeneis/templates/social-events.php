@@ -1,6 +1,6 @@
-<?php get_header(); 
-   //Template name: Social Events
-   $path = get_template_directory_uri();
+<?php get_header();
+//Template name: Social Events
+$path = get_template_directory_uri();
 ?>
 
    <section class="site-archive">
@@ -156,5 +156,6 @@
          </div>
       </div>
    </div>
+
 
 <?php get_footer(); ?>
