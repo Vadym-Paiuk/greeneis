@@ -3,244 +3,295 @@
 @import "../base/_colors.scss";
 
 .footer {
-	&__top {
-		background-color: $back_bg_2;
-	}
-	
-	&__top-inner {
-		display: flex;
-	}
-	
-	&__top-img {
-		position: relative;
-		margin-left: calc(-50vw + 50%);
-		flex: 1;
-		
-		img {
-			position: absolute;
-			inset: 0;
-			width: 100%;
-			height: 100%;
-			object-fit: cover;
-		}
-	}
-	
-	&__form-wrap {
-		flex: 0 1 rem(708);
-		
-		padding-top: rem(100);
-		padding-bottom: rem(124);
-		padding-left: rem(80);
-	}
-	
-	&__form-header {
-		display: grid;
-		gap: rem(24);
-		margin-bottom: rem(64);
-		
-		h3 {
-			@extend .h1;
-			text-align: left;
-		}
-		
-		p {
-			color: $gray_2;
-		}
-	}
-	
-	.form {
-		form {
-			.gform_fields {
-				display: flex;
-				flex-wrap: wrap;
-				gap: rem(24);
-			}
-			
-			.gfield {
-				flex: 1 1 calc(50% - rem(12));
-				
-				input,
-				textarea {
-					&:not([type="submit"]) {
-						border-color: $gray_dark;
-					}
-				}
-			}
-			
-			.gform_footer {
-				margin-top: rem(16);
-				
-				input[type="submit"] {
-					clip-path: polygon(
-							100% 0%,
-							92.755% 22.321%,
-							72.251% 0%,
-							58.568% 14.437%,
-							31.449% 0%,
-							17.357% 22.321%,
-							9.999% 0%,
-							0% 10.428%,
-							0% 100%,
-							100% 100%,
-							100% 0%
-					);
-				}
-			}
-		}
-	}
-	
-	&__main {
-		background-color: $green;
-	}
-	
-	&__main-inner {
-		display: flex;
-		gap: clamp(rem(40), vw(160), rem(160));
-		padding-block: clamp(rem(24), vw(100), rem(100));
-		flex-wrap: wrap;
-		@media (max-width: $tablet) {
-			display: grid;
-			grid-template-columns: 1fr;
-			padding-bottom: rem(32);
-		}
-	}
-	
-	&__content {
-		flex: 0 1 rem(420);
-	}
-	
-	.custom-logo-link {
-		display: block;
-		margin-bottom: rem(84);
-		
-		img {
-			width: rem(102);
-		}
-		
-		@media (max-width: $tablet) {
-			margin-bottom: rem(20);
-			img {
-				width: rem(53);
-			}
-		}
-	}
-	
-	&__info {
-		display: grid;
-		gap: rem(16);
-		
-		p {
-			font-size: rem(16);
-			letter-spacing: 0.02em;
-			color: $orange;
-		}
-		
-		span {
-			@extend .p2;
-			color: $gray_3;
-		}
-	}
-	
-	&__navs {
-		display: flex;
-		justify-content: space-between;
-		gap: rem(102);
-	}
-	
-	&__nav {
-		padding-left: rem(80);
-		border-left: rem(1) solid $white;
-		display: flex;
-		flex-direction: column;
-		gap: rem(32);
-		
-		p {
-			@extend .p2;
-			color: $orange;
-		}
-		
-		nav {
-			ul {
-				display: flex;
-				flex-direction: column;
-				gap: rem(16);
-				
-				a {
-					display: flex;
-					
-					font-family: $primary_font;
-					font-size: rem(16);
-					font-weight: 400;
-					letter-spacing: 0.02em;
-					color: $white;
-					text-transform: uppercase;
-					transition: $transition-all-linear;
-					
-					letter-spacing: rem(2);
-					
-					@media (any-hover: hover) {
-						&:hover {
-							color: $orange;
-						}
-					}
-				}
-			}
-		}
-	}
-	
-	&__bottom {
-		background-color: $green;
-		isolation: isolate;
-		position: relative;
-		
-		&::before {
-			content: "";
-			position: absolute;
-			z-index: -1;
-			inset: 0;
-			width: 100%;
-			height: 100%;
-			background-color: $black_bg;
-			opacity: 0.3;
-		}
-	}
-	
-	&__bottom-inner {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		
-		padding-block: rem(38);
-		
-		p {
-			@extend .p2;
-			color: $gray_4;
-		}
-	}
-	
-	&__social {
-		display: flex;
-		align-items: center;
-		gap: rem(24);
-		
-		a {
-			display: flex;
-			flex: 0 0 rem(24);
-			
-			img {
-				object-fit: contain;
-				transition: $transition-all-linear;
-				will-change: transform;
-				min-width: rem(11);
-			}
-			
-			@media (any-hover: hover) {
-				&:hover {
-					img {
-						transform: scale(1.1);
-					}
-				}
-			}
-		}
-	}
+   overflow: hidden;
+   &__top {
+      background-color: $back_bg_2;
+   }
+   &__top-inner {
+      display: flex;
+      @media (max-width: $tablet) {
+         display: grid;
+         grid-template-columns: 1fr;
+      }
+   }
+   &__top-img {
+      position: relative;
+
+      img {
+         position: absolute;
+         inset: 0;
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+      }
+      @media (min-width: $tablet) {
+         margin-left: calc(-50vw + 50%);
+         flex: 1;
+      }
+      @media (max-width: $tablet) {
+         height: vwm(491);
+         margin-inline: rem(-20);
+      }
+   }
+   &__form-wrap {
+      flex: 0 1 rem(708);
+
+      padding-top: clamp(rem(44), vw(100), rem(100));
+      padding-bottom: clamp(rem(44), vw(124), rem(124));
+      @media (min-width: $tablet) {
+         padding-left: rem(80);
+      }
+   }
+   &__form-header {
+      display: grid;
+      gap: rem(24);
+      margin-bottom: rem(64);
+      h3 {
+         @extend .h1;
+         text-align: left;
+         @extend .h3-mob;
+      }
+      p {
+         color: $gray_2;
+         @extend .p2-mob;
+      }
+      @media (max-width: $tablet) {
+         gap: rem(16);
+         margin-bottom: rem(32);
+      }
+   }
+   .form {
+      form {
+         .gform_fields {
+            display: flex;
+            flex-wrap: wrap;
+            gap: rem(24);
+            @media (max-width: $tablet) {
+               display: grid;
+               grid-template-columns: 1fr;
+               gap: rem(16);
+            }
+         }
+         .gfield {
+            flex: 1 1 calc(50% - rem(12));
+            input,
+            textarea {
+               &:not([type="submit"]) {
+                  border-color: $gray_dark;
+               }
+            }
+         }
+         .gform_footer {
+            margin-top: rem(16);
+
+            input[type="submit"] {
+               clip-path: polygon(
+                  100% 0%,
+                  92.755% 22.321%,
+                  72.251% 0%,
+                  58.568% 14.437%,
+                  31.449% 0%,
+                  17.357% 22.321%,
+                  9.999% 0%,
+                  0% 10.428%,
+                  0% 100%,
+                  100% 100%,
+                  100% 0%
+               );
+            }
+            @media (max-width: $tablet) {
+               margin-top: rem(8);
+            }
+         }
+      }
+   }
+   &__main {
+      background-color: $green;
+   }
+   &__main-inner {
+      display: flex;
+      gap: clamp(rem(40), vw(160), rem(160));
+      padding-top: clamp(rem(24), vw(100), rem(100));
+      padding-bottom: clamp(rem(12), vw(100), rem(100));
+
+      flex-wrap: wrap;
+      @media (max-width: $tablet) {
+         display: grid;
+         grid-template-columns: 1fr;
+         padding-bottom: rem(32);
+         gap: rem(20);
+      }
+   }
+   &__content {
+      flex: 0 1 rem(420);
+      @media (max-width: $tablet) {
+         display: grid;
+         grid-template-columns: 1fr;
+         justify-items: center;
+         justify-content: center;
+         text-align: center;
+      }
+   }
+
+   .custom-logo-link {
+      display: block;
+      margin-bottom: rem(84);
+
+      img {
+         width: rem(102);
+      }
+
+      @media (max-width: $tablet) {
+         margin-bottom: rem(20);
+         img {
+            width: rem(54);
+         }
+      }
+   }
+   &__info {
+      display: grid;
+      gap: rem(16);
+      p {
+         font-size: rem(16);
+         letter-spacing: 0.02em;
+         color: $orange;
+      }
+      span {
+         @extend .p2;
+         @extend .p3-mob;
+
+         color: $gray_3;
+         @media (max-width: $tablet) {
+            text-align: left;
+         }
+      }
+   }
+   &__navs {
+      display: flex;
+      justify-content: space-between;
+      gap: rem(102);
+      @media (max-width: $tablet) {
+         display: grid;
+         grid-template-columns: 1fr;
+         justify-items: center;
+         gap: rem(0);
+      }
+   }
+   &__nav {
+      display: flex;
+      flex-direction: column;
+      gap: rem(32);
+      @media (min-width: $tablet) {
+         padding-left: rem(80);
+         border-left: rem(1) solid $white;
+      }
+      @media (max-width: $tablet) {
+         border-top: rem(1) solid $white;
+         padding-block: rem(20);
+         width: 100%;
+         align-items: center;
+         text-align: center;
+         gap: rem(24);
+      }
+      p {
+         @extend .p2;
+         color: $orange;
+      }
+      nav {
+         ul {
+            display: flex;
+            flex-direction: column;
+            gap: rem(16);
+            a {
+               display: flex;
+
+               font-family: $primary_font;
+               font-size: rem(16);
+               font-weight: 400;
+               letter-spacing: 0.02em;
+               color: $white;
+               text-transform: uppercase;
+               transition: $transition-all-linear;
+
+               letter-spacing: rem(2);
+
+               color: $white_2;
+
+               @media (any-hover: hover) {
+                  &:hover {
+                     color: $orange;
+                  }
+               }
+            }
+            @media (max-width: $tablet) {
+               align-items: center;
+               text-align: center;
+               a {
+                  font-size: rem(14);
+               }
+            }
+         }
+      }
+   }
+   &__bottom {
+      background-color: $green;
+      isolation: isolate;
+      position: relative;
+
+      &::before {
+         content: "";
+         position: absolute;
+         z-index: -1;
+         inset: 0;
+         width: 100%;
+         height: 100%;
+         background-color: $black_bg;
+         opacity: 0.3;
+      }
+   }
+   &__bottom-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      padding-block: clamp(rem(24), vw(38), rem(38));
+      p {
+         @extend .p2;
+         color: $gray_4;
+      }
+      @media (max-width: $tablet) {
+         display: grid;
+         grid-template-columns: 1fr;
+         justify-items: center;
+         text-align: center;
+         gap: rem(16);
+         p {
+            order: 1;
+            font-size: rem(12);
+         }
+      }
+   }
+   &__social {
+      display: flex;
+      align-items: center;
+      gap: rem(24);
+      a {
+         display: flex;
+         flex: 0 0 rem(24);
+         img {
+            object-fit: contain;
+            transition: $transition-all-linear;
+            will-change: transform;
+            min-width: rem(11);
+         }
+
+         @media (any-hover: hover) {
+            &:hover {
+               img {
+                  transform: scale(1.1);
+               }
+            }
+         }
+      }
+   }
 }
