@@ -39,3 +39,4 @@ wp-config.php
 # Vendor
 **/vendor/
 !/wp-content/themes/greeneis/assets/src/vendor
+archive.zip
