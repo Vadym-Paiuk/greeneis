@@ -2,6 +2,7 @@
 
 namespace Theme\Inc\Classes\Setup;
 
+use Theme\inc\classes\blog\Blog;
 use Theme\inc\classes\helpers\Functions;
 use Theme\inc\classes\menu\Menu;
 use Theme\Inc\Classes\Support\Svg;
@@ -36,6 +37,7 @@ class Theme_Setup {
 		Taxonomy::get_instance();
 		CPT::get_instance();
 		menu::get_instance();
+		Blog::get_instance();
 	}
 	
 	public function deactivate_gutenberg_editor() {
@@ -89,6 +91,7 @@ class Theme_Setup {
 			'current_user_id' => get_current_user_id(),
 			'nonce'           => wp_create_nonce( NONCE_CODE ),
 			'current_page'    => get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1,
+			'max_page'        => $GLOBALS['wp_query']->max_num_pages
 		) );
 	}
 	
@@ -107,7 +110,9 @@ class Theme_Setup {
 	
 	public function register_menus() {
 		register_nav_menus( array(
-			'header-menu' => esc_html__( 'Header Menu' ),
+			'header-menu'   => esc_html__( 'Header Menu' ),
+			'footer-menu-1' => esc_html__( 'Footer Menu 1' ),
+			'footer-menu-2' => esc_html__( 'Footer Menu 2' ),
 		) );
 	}
 	

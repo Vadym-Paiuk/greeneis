@@ -29,7 +29,7 @@
 </head>
 
 <body <?php body_class(); ?>>
-<?php wp_body_open(); 
+<?php wp_body_open();
 $path = get_template_directory_uri();
 ?>
 
@@ -40,33 +40,42 @@ $path = get_template_directory_uri();
 			<div class="header__logo">
 				<a href="<?php echo home_url();?>">
 					<img class="header__logo-white"  src="<?php echo $path;?>/assets/src/images/icons/logo.svg" alt="" loading="lazy">
-					<!-- <img class="header__logo-black" src="<?php echo $path;?>/assets/src/images/icons/logo-black.svg" alt="" loading="lazy"> -->
 				</a>
+				<?php echo get_custom_logo(); ?>
 			</div>
 			<div class="header__menu">
-				<nav>
-					<ul>
-						<li><a href="#">Home</a></li>
-						<li class="menu-item-has-children">
-							<a href="#">Services</a>
-							<ul class="sub-menu">
-								<li><a href="#">Item 1</a></li>
-								<li><a href="#">Item 2</a></li>
-							</ul>
-						</li>
-						<li><a href="#">About</a></li>
-						<li>
-							<a href="#">Resources</a>
-							<ul class="sub-menu">
-								<li><a href="#">Item 1</a></li>
-								<li><a href="#">Item 2</a></li>
-							</ul>
-						</li>
-						<li><a href="#">Career</a></li>
-						<li><a href="#">Support</a></li>
-						<li><a href="#">Contact</a></li>
-					</ul>
-				</nav>
+				<?php
+				$menu_name = 'header-menu';
+				if ( has_nav_menu( $menu_name ) ) {
+					wp_nav_menu( [
+						'theme_location'  => $menu_name,
+						'menu'            => '',
+						'container'       => 'nav',
+						'container_class' => '',
+						'container_id'    => '',
+						'menu_class'      => '',
+						'menu_id'         => '',
+						'echo'            => true,
+						'fallback_cb'     => 'wp_page_menu',
+						'before'          => '',
+						'after'           => '',
+						'link_before'     => '',
+						'link_after'      => '',
+						'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+						'depth'           => 0,
+						'walker'          => '',
+					] );
+				}
+				?>
+			</div>
+			<div class="header__button">
+				<?php if ( ! empty( $header['link'] ) ): ?>
+					<a class="btn"
+					   href="<?php echo $header['link']['url']; ?>"
+					   target="<?php echo $header['link']['target']; ?>">
+						<?php echo $header['link']['title']; ?>
+					</a>
+				<?php endif; ?>
 			</div>
 
 			<a class="btn" href="#" >Get Started</a>
@@ -75,6 +84,7 @@ $path = get_template_directory_uri();
             <span></span>
             <span></span>
          </button>
+
 		</div>
 	</div>
 </header>
