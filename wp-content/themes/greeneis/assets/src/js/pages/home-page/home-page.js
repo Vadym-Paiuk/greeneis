@@ -190,7 +190,6 @@ $(function () {
         })
 
     }
-
     let scrollPrev;
 
     function fixedHeaderActions() {
@@ -212,26 +211,10 @@ $(function () {
 
     initSlider();
     Fancybox.bind();
-    $(document).on('click', '.event-modal', function (e) {
-        let contentText = $(this).closest('.card').find('.card__content p').text();
-
-        $('#input_4_11').val(contentText);
-    });
-
-    $(document).on('click', '.our-team__loadmore', function (e) {
-        e.preventDefault();
-        
-        let btn = $(this),
-            parent = btn.parent(),
-            card = parent.find('.our-team__card');
-
-        btn.remove();
-        card.removeClass('hidden');
-    });
 
     function videoControlls() {
         let videoWrap = document.querySelector('.block-video');
-
+        console.log('its work');
         if (!videoWrap) return;
         videoWrap.addEventListener('click', videoHandler)
 
@@ -255,7 +238,6 @@ $(function () {
             }
 
         }
-
         function checkCurrentClass(click) {
             if (click.classList.contains('block-video__btn') || click.classList.contains('block-video__video')) {
                 return true;
@@ -263,7 +245,6 @@ $(function () {
 
         }
     }
-
     videoControlls();
 
     function moveElemAfter(width, selector, destination, home) {
