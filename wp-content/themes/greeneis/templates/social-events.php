@@ -106,7 +106,7 @@
          </div>
       </div>
    </section>
-   <div class="card-modal" id="dialog-content" style="display:none;max-width:788px;">
+   <div class="card-modal" id="dialog-content" style="display:none;">
       <div class="card-modal__inner">
          <div class="card-modal__header">
             <h2>Registration for a social event</h2>

@@ -73,114 +73,144 @@
             <h2>Meet the Team</h2>
          </div>
          <div class="our-team__main">
-            <a href="#" class="our-team__card">
-               <span class="our-team__card-img">
-                  <img  src="<?php echo $path;?>/assets/src/images/about/our-team-1.jpg" alt="" loading="lazy">
-               </span>
-               <span class="our-team__card-main">
-                  <span class="our-team__card-title">Benjamin Greene</span>
-                  <div class="our-team__card-desc">AI Monkey</div>
-               </span>
-            </a>
-            <a href="#" class="our-team__card">
-               <span class="our-team__card-img">
-                  <img  src="<?php echo $path;?>/assets/src/images/about/our-team-2.jpg" alt="" loading="lazy">
-               </span>
-               <span class="our-team__card-main">
-                  <span class="our-team__card-title">Jacky Cunningham</span>
-                  <div class="our-team__card-desc">Mama Bear</div>
-               </span>
-            </a>
-            <a href="#" class="our-team__card">
-               <span class="our-team__card-img">
-                  <img  src="<?php echo $path;?>/assets/src/images/about/our-team-3.jpg" alt="" loading="lazy">
-               </span>
-               <span class="our-team__card-main">
-                  <span class="our-team__card-title">Skip Klemz</span>
-                  <div class="our-team__card-desc">Admin</div>
-               </span>
-            </a>
-            <a href="#" class="our-team__card">
-               <span class="our-team__card-img">
-                  <img  src="<?php echo $path;?>/assets/src/images/about/our-team-4.jpg" alt="" loading="lazy">
-               </span>
-               <span class="our-team__card-main">
-                  <span class="our-team__card-title">Kristof Wenecki</span>
-                  <div class="our-team__card-desc">Project Sensei</div>
-               </span>
-            </a>
-            <a href="#" class="our-team__card">
-               <span class="our-team__card-img">
-                  <img  src="<?php echo $path;?>/assets/src/images/about/our-team-5.jpg" alt="" loading="lazy">
-               </span>
-               <span class="our-team__card-main">
-                  <span class="our-team__card-title">Luis Penalver</span>
-                  <div class="our-team__card-desc">Service Warrior</div>
-               </span>
-            </a>
-            <a href="#" class="our-team__card">
-               <span class="our-team__card-img">
-                  <img  src="<?php echo $path;?>/assets/src/images/about/our-team-6.jpg" alt="" loading="lazy">
-               </span>
-               <span class="our-team__card-main">
-                  <span class="our-team__card-title">Christian Castro</span>
-                  <div class="our-team__card-desc">Creative Business Director</div>
-               </span>
-            </a>
-            <a href="#" class="our-team__card">
-               <span class="our-team__card-img">
-                  <img  src="<?php echo $path;?>/assets/src/images/about/our-team-7.jpg" alt="" loading="lazy">
-               </span>
-               <span class="our-team__card-main">
-                  <span class="our-team__card-title">Will Reed</span>
-                  <div class="our-team__card-desc">Information Redacted</div>
-               </span>
-            </a>
-            <a href="#" class="our-team__card">
-               <span class="our-team__card-img">
-                  <img  src="<?php echo $path;?>/assets/src/images/about/our-team-8.jpg" alt="" loading="lazy">
-               </span>
-               <span class="our-team__card-main">
-                  <span class="our-team__card-title">Mo Darbo</span>
-                  <div class="our-team__card-desc">Interweb Mechanic</div>
-               </span>
-            </a>
-            <a href="#" class="our-team__card">
-               <span class="our-team__card-img">
-                  <img  src="<?php echo $path;?>/assets/src/images/about/our-team-9.jpg" alt="" loading="lazy">
-               </span>
-               <span class="our-team__card-main">
-                  <span class="our-team__card-title">Dave Stephenson</span>
-                  <div class="our-team__card-desc">Human Robot Automator</div>
-               </span>
-            </a>
-            <a href="#" class="our-team__card">
-               <span class="our-team__card-img">
-                  <img  src="<?php echo $path;?>/assets/src/images/about/our-team-10.jpg" alt="" loading="lazy">
-               </span>
-               <span class="our-team__card-main">
-                  <span class="our-team__card-title">Tyler Greene</span>
-                  <div class="our-team__card-desc">Tyler</div>
-               </span>
-            </a>
-            <a href="#" class="our-team__card">
-               <span class="our-team__card-img">
-                  <img  src="<?php echo $path;?>/assets/src/images/about/our-team-11.jpg" alt="" loading="lazy">
-               </span>
-               <span class="our-team__card-main">
-                  <span class="our-team__card-title">Ben Choate</span>
-                  <div class="our-team__card-desc">Ben</div>
-               </span>
-            </a>
-            <a href="#" class="our-team__card">
-               <span class="our-team__card-img">
-                  <img  src="<?php echo $path;?>/assets/src/images/about/our-team-12.jpg" alt="" loading="lazy">
-               </span>
-               <span class="our-team__card-main">
-                  <span class="our-team__card-title">Dan Morton</span>
-                  <div class="our-team__card-desc">Dan the man</div>
-               </span>
-            </a>
+            <div class="our-team__slider swiper">
+               <div class="our-team__wrapper swiper-wrapper">
+                  <div class="our-team__slide swiper-slide">
+                     <a href="#" class="our-team__card">
+                        <span class="our-team__card-img">
+                           <img  src="<?php echo $path;?>/assets/src/images/about/our-team-1.jpg" alt="" loading="lazy">
+                        </span>
+                        <span class="our-team__card-main">
+                           <span class="our-team__card-title">Benjamin Greene</span>
+                           <div class="our-team__card-desc">AI Monkey</div>
+                        </span>
+                     </a>
+                  </div>
+                  <div class="our-team__slide swiper-slide">
+                                         <a href="#" class="our-team__card">
+                        <span class="our-team__card-img">
+                           <img  src="<?php echo $path;?>/assets/src/images/about/our-team-2.jpg" alt="" loading="lazy">
+                        </span>
+                        <span class="our-team__card-main">
+                           <span class="our-team__card-title">Jacky Cunningham</span>
+                           <div class="our-team__card-desc">Mama Bear</div>
+                        </span>
+                     </a> 
+                  </div>
+                  <div class="our-team__slide swiper-slide">
+                   <a href="#" class="our-team__card">
+                        <span class="our-team__card-img">
+                           <img  src="<?php echo $path;?>/assets/src/images/about/our-team-3.jpg" alt="" loading="lazy">
+                        </span>
+                        <span class="our-team__card-main">
+                           <span class="our-team__card-title">Skip Klemz</span>
+                           <div class="our-team__card-desc">Admin</div>
+                        </span>
+                     </a>                     
+                  </div>
+                  <div class="our-team__slide swiper-slide">
+                     <a href="#" class="our-team__card">
+                        <span class="our-team__card-img">
+                           <img  src="<?php echo $path;?>/assets/src/images/about/our-team-4.jpg" alt="" loading="lazy">
+                        </span>
+                        <span class="our-team__card-main">
+                           <span class="our-team__card-title">Kristof Wenecki</span>
+                           <div class="our-team__card-desc">Project Sensei</div>
+                        </span>
+                     </a>                     
+                  </div>
+                  <div class="our-team__slide swiper-slide">
+                     <a href="#" class="our-team__card">
+                        <span class="our-team__card-img">
+                           <img  src="<?php echo $path;?>/assets/src/images/about/our-team-5.jpg" alt="" loading="lazy">
+                        </span>
+                        <span class="our-team__card-main">
+                           <span class="our-team__card-title">Luis Penalver</span>
+                           <div class="our-team__card-desc">Service Warrior</div>
+                        </span>
+                     </a>                     
+                  </div>
+                  <div class="our-team__slide swiper-slide">
+                      <a href="#" class="our-team__card">
+                        <span class="our-team__card-img">
+                           <img  src="<?php echo $path;?>/assets/src/images/about/our-team-6.jpg" alt="" loading="lazy">
+                        </span>
+                        <span class="our-team__card-main">
+                           <span class="our-team__card-title">Christian Castro</span>
+                           <div class="our-team__card-desc">Creative Business Director</div>
+                        </span>
+                     </a>                    
+                  </div>
+                  <div class="our-team__slide swiper-slide">
+                     <a href="#" class="our-team__card">
+                        <span class="our-team__card-img">
+                           <img  src="<?php echo $path;?>/assets/src/images/about/our-team-7.jpg" alt="" loading="lazy">
+                        </span>
+                        <span class="our-team__card-main">
+                           <span class="our-team__card-title">Will Reed</span>
+                           <div class="our-team__card-desc">Information Redacted</div>
+                        </span>
+                     </a>                     
+                  </div>
+
+                  <div class="our-team__slide swiper-slide">
+                      <a href="#" class="our-team__card">
+                        <span class="our-team__card-img">
+                           <img  src="<?php echo $path;?>/assets/src/images/about/our-team-8.jpg" alt="" loading="lazy">
+                        </span>
+                        <span class="our-team__card-main">
+                           <span class="our-team__card-title">Mo Darbo</span>
+                           <div class="our-team__card-desc">Interweb Mechanic</div>
+                        </span>
+                     </a>                    
+                  </div>
+                  <div class="our-team__slide swiper-slide">
+                      <a href="#" class="our-team__card">
+                        <span class="our-team__card-img">
+                           <img  src="<?php echo $path;?>/assets/src/images/about/our-team-9.jpg" alt="" loading="lazy">
+                        </span>
+                        <span class="our-team__card-main">
+                           <span class="our-team__card-title">Dave Stephenson</span>
+                           <div class="our-team__card-desc">Human Robot Automator</div>
+                        </span>
+                     </a>                    
+                  </div>
+                  <div class="our-team__slide swiper-slide">
+                     <a href="#" class="our-team__card">
+                        <span class="our-team__card-img">
+                           <img  src="<?php echo $path;?>/assets/src/images/about/our-team-10.jpg" alt="" loading="lazy">
+                        </span>
+                        <span class="our-team__card-main">
+                           <span class="our-team__card-title">Tyler Greene</span>
+                           <div class="our-team__card-desc">Tyler</div>
+                        </span>
+                     </a>                     
+                  </div>
+                  <div class="our-team__slide swiper-slide">
+                     <a href="#" class="our-team__card">
+                        <span class="our-team__card-img">
+                           <img  src="<?php echo $path;?>/assets/src/images/about/our-team-11.jpg" alt="" loading="lazy">
+                        </span>
+                        <span class="our-team__card-main">
+                           <span class="our-team__card-title">Ben Choate</span>
+                           <div class="our-team__card-desc">Ben</div>
+                        </span>
+                     </a>                     
+                  </div>
+                  <div class="our-team__slide swiper-slide">
+                     <a href="#" class="our-team__card">
+                        <span class="our-team__card-img">
+                           <img  src="<?php echo $path;?>/assets/src/images/about/our-team-12.jpg" alt="" loading="lazy">
+                        </span>
+                        <span class="our-team__card-main">
+                           <span class="our-team__card-title">Dan Morton</span>
+                           <div class="our-team__card-desc">Dan the man</div>
+                        </span>
+                     </a>                     
+                  </div>
+               </div>
+               <div class="swiper-pagination"></div>
+            </div>
          </div>
          <a href="" class="our-team__loadmore  btn--transparent">See more team</a>
       </div>

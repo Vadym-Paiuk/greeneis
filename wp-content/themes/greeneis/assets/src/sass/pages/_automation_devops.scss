@@ -4,15 +4,20 @@
    &__inner {
       display: grid;
       grid-template-columns: 1fr;
-      padding-top: rem(120);
-      padding-bottom: rem(150);
+      padding-top: clamp(rem(32), vw(120), rem(120));
+      padding-bottom: clamp(rem(24), vw(150), rem(150));
       gap: rem(100);
+      @media (max-width: $tablet) {
+         gap: rem(24);
+      }
    }
    &__header {
       width: 100%;
       max-width: rem(1070);
       h2 {
          @extend .h2;
+         @extend .h3-mob;
+         text-align: left;
       }
    }
    &__main {
@@ -23,6 +28,15 @@
       & > p {
          @extend .sub-title;
       }
+      @media (max-width: $tablet) {
+         display: grid;
+         grid-template-columns: 1fr;
+         gap: rem(24);
+
+         & > p {
+            font-size: rem(14);
+         }
+      }
    }
 
    &__text {
@@ -32,7 +46,7 @@
       gap: rem(16);
       p {
          @extend .p1;
-
+         @extend .p2-mob;
          opacity: 0.8;
       }
    }
@@ -62,8 +76,8 @@
    background-color: $green;
    &__wrapper {
       background-color: $green_light_3;
-      padding-top: rem(200);
-      padding-bottom: rem(150);
+      padding-top: clamp(rem(64), vw(200), rem(200));
+      padding-bottom: clamp(rem(44), vw(150), rem(150));
       clip-path: polygon(
          59.479% 7.823%,
          40.764% 0%,
@@ -75,6 +89,19 @@
          86.701% 0%,
          59.479% 7.823%
       );
+      @media (max-width: $tablet) {
+         clip-path: polygon(
+            57.867% 1.944%,
+            40.764% 0%,
+            13.6% 2.988%,
+            0% 0%,
+            0% 100%,
+            100% 100%,
+            100% 2.476%,
+            86.701% 0%,
+            57.867% 1.944%
+         );
+      }
    }
 
    &__inner {
@@ -86,13 +113,19 @@
       margin-inline: auto;
       text-align: center;
 
-      margin-bottom: rem(128);
+      margin-bottom: clamp(rem(32), vw(128), rem(128));
+      h2 {
+         @extend .h4-mob;
+      }
    }
 
    &__cards {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: rem(24);
+      @media (max-width: $tabletSmall) {
+         grid-template-columns: 1fr;
+      }
    }
 
    &__card {
@@ -106,6 +139,11 @@
 
       padding-block: rem(80);
       padding-inline: rem(35);
+      @media (max-width: $tablet) {
+         gap: rem(24);
+         padding-block: rem(56);
+         padding-inline: rem(32);
+      }
    }
 
    &__card-count {
@@ -120,6 +158,11 @@
 
       p {
          @extend .h4;
+         @extend .p1-mob;
+      }
+      @media (max-width: $tablet) {
+         width: rem(64);
+         height: rem(64);
       }
    }
 
@@ -132,10 +175,16 @@
       color: $black;
       p {
          @extend .h3;
+         @extend .h4-mob;
       }
       span {
          @extend .p1;
+         @extend .p2-mob;
+
          color: $gray_6;
+      }
+      @media(max-width:$tablet){
+         gap: rem(16);
       }
    }
 }
@@ -154,7 +203,10 @@
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: rem(24);
-      margin-bottom: rem(150);
+      margin-bottom: clamp(rem(48),vw(150),rem(150));
+      @media(max-width:$tablet){
+         grid-template-columns: 1fr;
+      }
    }
 
    &__column {

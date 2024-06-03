@@ -8,7 +8,7 @@
       <!-- <img  src="<?php echo $path;?>/assets/src/images/home/hero.jpg" alt="" loading="lazy"> -->
       <video src="<?php echo $path;?>/assets/src/images/video.mp4" muted="" loop="true" autoplay="" preload="  " poster=""></video>
    </div>
-   <div class="cotainer">
+   <div class="container">
       <div class="hero__inner">
          <div class="hero__content">
             <h1>Navigate Your Technology Summit</h1>
@@ -55,110 +55,131 @@
          <p>Knowing what your business needs can be daunting. Let us help you!</p>
       </div>
       <div class="cards-content__cards">
-         <div class="cards-content__card">
-            <div class="cards-content__card-header">
-               <span>1</span>
-               <p>Automation & DevOps</p>
+         <div class="cards-content__slider swiper">
+            <div class="cards-content__wrapper swiper-wrapper">
+               <div class="cards-content__slide swiper-slide">
+                  <div class="cards-content__card">
+                     <div class="cards-content__card-header">
+                        <span>1</span>
+                        <p>Automation & DevOps</p>
+                     </div>
+                     <div class="cards-content__card-text">
+                        <p>
+                           Traditional IT is isolated from business operations.
+                           At Greene IS we believe in the DevOps principals. 
+                           Specifically, that operations and IT cannot be separated...
+                        </p>
+                     </div>
+                     <a class="cards-content__card-link btn--transparent" href="#">Learn more</a>
+                  </div>                
+               </div>
+               <div class="cards-content__slide swiper-slide">
+                  <div class="cards-content__card">
+                     <div class="cards-content__card-header">
+                        <span>2</span>
+                        <p>Managed Services</p>
+                     </div>
+                     <div class="cards-content__card-text">
+                        <p>
+                           Choose us as your managed services provider and let your business
+                           thrive in a tech-savvy world, worry-free.
+                        </p>
+                     </div>
+                     <a class="cards-content__card-link btn--transparent" href="#">Learn more</a>
+                  </div>
+               </div>
+               <div class="cards-content__slide swiper-slide">
+                  <div class="cards-content__card">
+                     <div class="cards-content__card-header">
+                        <span>3</span>
+                        <p>Mergers and Acquisitions</p>
+                     </div>
+                     <div class="cards-content__card-text">
+                        <p>
+                           As a managed services provider, Greene IS offers IT leadership and support
+                           to companies involved in all aspects of M&A activity...
+                        </p>
+                     </div>
+                     <a class="cards-content__card-link btn--transparent" href="#">Learn more</a>
+                  </div>
+               </div>
+               <div class="cards-content__slide swiper-slide">
+                  <div class="cards-content__card">
+                     <div class="cards-content__card-header">
+                        <span>4</span>
+                        <p>Security</p>
+                     </div>
+                     <div class="cards-content__card-text">
+                        <p>
+                           Greene Security Services for Modernization was created for customers that
+                           want to leverage Microsoft best practices and know-how as they embrace new modern...
+                        </p>
+                     </div>
+                     <a class="cards-content__card-link btn--transparent" href="#">Learn more</a>
+                  </div>
+               </div>
+               <div class="cards-content__slide swiper-slide">
+                  <div class="cards-content__card">
+                     <div class="cards-content__card-header">
+                        <span>5</span>
+                        <p>Endpoints & Devices</p>
+                     </div>
+                     <div class="cards-content__card-text">
+                        <p>
+                           Endpoint Management is the new way to manage your devises on-premise or the cloud.
+                        </p>
+                     </div>
+                     <a class="cards-content__card-link btn--transparent" href="#">Learn more</a>
+                  </div>
+               </div>
+               <div class="cards-content__slide swiper-slide">
+                  <div class="cards-content__card">
+                     <div class="cards-content__card-header">
+                        <span>6</span>
+                        <p>Cloud & Hybrid</p>
+                     </div>
+                     <div class="cards-content__card-text">
+                        <p>
+                           Not all businesses are born cloud first. Majority of businesses have on premise
+                           or hosted infrastructure. Determining which services should...
+                        </p>
+                     </div>
+                     <a class="cards-content__card-link btn--transparent" href="#">Learn more</a>
+                  </div>
+               </div>
+               <div class="cards-content__slide swiper-slide">
+                  <div class="cards-content__card">
+                     <div class="cards-content__card-header">
+                        <span>7</span>
+                        <p>Migrations</p>
+                     </div>
+                     <div class="cards-content__card-text">
+                        <p>
+                           Maybe it’s managing the newly acquired IT teams and contractors? Or 
+                           it’s aligning HR processes and operational differences?
+                        </p>
+                     </div>
+                     <a class="cards-content__card-link btn--transparent" href="#">Learn more</a>
+                  </div>
+               </div>
+               <div class="cards-content__slide swiper-slide">
+                  <div class="cards-content__card">
+                     <div class="cards-content__card-header">
+                        <span>8</span>
+                        <p>Licensing</p>
+                     </div>
+                     <div class="cards-content__card-text">
+                        <p>
+                           Greene can be your single point of contact for your licensing needs. 
+                           It can be time consuming, frustrating and costly to manage the various
+                           licensing models and renewals.
+                        </p>
+                     </div>
+                     <a class="cards-content__card-link btn--transparent" href="#">Learn more</a>
+                  </div>
+               </div>
             </div>
-            <div class="cards-content__card-text">
-               <p>
-                  Traditional IT is isolated from business operations.
-                  At Greene IS we believe in the DevOps principals. 
-                  Specifically, that operations and IT cannot be separated...
-               </p>
-            </div>
-            <a class="cards-content__card-link btn--transparent" href="#">Learn more</a>
-         </div>
-         <div class="cards-content__card">
-            <div class="cards-content__card-header">
-               <span>2</span>
-               <p>Managed Services</p>
-            </div>
-            <div class="cards-content__card-text">
-               <p>
-                  Choose us as your managed services provider and let your business
-                   thrive in a tech-savvy world, worry-free.
-               </p>
-            </div>
-            <a class="cards-content__card-link btn--transparent" href="#">Learn more</a>
-         </div>
-         <div class="cards-content__card">
-            <div class="cards-content__card-header">
-               <span>3</span>
-               <p>Mergers and Acquisitions</p>
-            </div>
-            <div class="cards-content__card-text">
-               <p>
-                  As a managed services provider, Greene IS offers IT leadership and support
-                  to companies involved in all aspects of M&A activity...
-               </p>
-            </div>
-            <a class="cards-content__card-link btn--transparent" href="#">Learn more</a>
-         </div>
-         <div class="cards-content__card">
-            <div class="cards-content__card-header">
-               <span>4</span>
-               <p>Security</p>
-            </div>
-            <div class="cards-content__card-text">
-               <p>
-                  Greene Security Services for Modernization was created for customers that
-                   want to leverage Microsoft best practices and know-how as they embrace new modern...
-               </p>
-            </div>
-            <a class="cards-content__card-link btn--transparent" href="#">Learn more</a>
-         </div>
-         <div class="cards-content__card">
-            <div class="cards-content__card-header">
-               <span>5</span>
-               <p>Endpoints & Devices</p>
-            </div>
-            <div class="cards-content__card-text">
-               <p>
-                  Endpoint Management is the new way to manage your devises on-premise or the cloud.
-               </p>
-            </div>
-            <a class="cards-content__card-link btn--transparent" href="#">Learn more</a>
-         </div>
-         <div class="cards-content__card">
-            <div class="cards-content__card-header">
-               <span>6</span>
-               <p>Cloud & Hybrid</p>
-            </div>
-            <div class="cards-content__card-text">
-               <p>
-                  Not all businesses are born cloud first. Majority of businesses have on premise
-                   or hosted infrastructure. Determining which services should...
-               </p>
-            </div>
-            <a class="cards-content__card-link btn--transparent" href="#">Learn more</a>
-         </div>
-         <div class="cards-content__card">
-            <div class="cards-content__card-header">
-               <span>7</span>
-               <p>Migrations</p>
-            </div>
-            <div class="cards-content__card-text">
-               <p>
-                  Maybe it’s managing the newly acquired IT teams and contractors? Or 
-                  it’s aligning HR processes and operational differences?
-               </p>
-            </div>
-            <a class="cards-content__card-link btn--transparent" href="#">Learn more</a>
-         </div>
-         <div class="cards-content__card">
-            <div class="cards-content__card-header">
-               <span>8</span>
-               <p>Licensing</p>
-            </div>
-            <div class="cards-content__card-text">
-               <p>
-                  Greene can be your single point of contact for your licensing needs. 
-                  It can be time consuming, frustrating and costly to manage the various
-                  licensing models and renewals.
-               </p>
-            </div>
-            <a class="cards-content__card-link btn--transparent" href="#">Learn more</a>
+            <div class="cards-content__slider-pagination swiper-pagination"></div>
          </div>
       </div>
    </div>

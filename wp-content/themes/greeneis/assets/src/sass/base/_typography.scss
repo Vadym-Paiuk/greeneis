@@ -9,7 +9,7 @@
 h1,
 .h1 {
    font-family: $secondary_font;
-   font-size: rem(72);
+   font-size: clamp(rem(32), vw(72), rem(72));
    font-weight: 600;
    line-height: 1.11;
    text-align: center;
@@ -29,12 +29,30 @@ h3,
    font-size: rem(32);
    line-height: 1.37;
 }
+.h3-mob {
+   @media (max-width: $tablet) {
+      font-family: $secondary_font;
+      font-weight: 600;
+      font-size: rem(32) !important;
+      line-height: 1.38;
+      text-align: center;
+   }
+}
 h4,
 .h4 {
    font-family: $secondary_font;
    font-weight: 600;
    font-size: rem(24);
    line-height: 1.33;
+}
+.h4-mob {
+   @media (max-width: $tablet) {
+      font-family: $secondary_font;
+      font-weight: 600;
+      font-size: rem(24);
+      line-height: 1.33;
+      text-align: center;
+   }
 }
 p,
 .p1 {
@@ -43,9 +61,26 @@ p,
    font-weight: 400;
    line-height: 1.55;
 }
+.p1-mob {
+   @media (max-width: $tablet) {
+      font-family: $third_font;
+      font-weight: 400;
+      font-size: rem(18);
+      line-height: 1.58;
+   }
+}
 .p2 {
    font-family: $third_font;
    font-size: rem(16);
+}
+.p2-mob {
+   @media (max-width: $tablet) {
+      font-family: $third_font;
+      font-style: normal;
+      font-weight: 400;
+      font-size: rem(16);
+      line-height: 1.5;
+   }
 }
 .p3 {
    font-family: $third_font;
@@ -53,9 +88,17 @@ p,
    font-weight: 400;
    font-size: rem(14);
    line-height: 1.42;
+}
+.p3-mob {
    @media (max-width: $tablet) {
+      font-family: $third_font;
+      font-weight: 400;
       font-size: rem(14);
-      line-height: 1.42;
+      line-height: 1.43;
+
+      text-align: center;
+
+      color: #ffffffb3;
    }
 }
 .sub-title {
@@ -84,6 +127,8 @@ p,
       border-radius: 50%;
 
       background-color: $orange;
+   }
+   @media (max-width: $tablet) {
    }
 }
 .capture {
