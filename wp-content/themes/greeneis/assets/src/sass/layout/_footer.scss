@@ -89,7 +89,7 @@
                   border-color: $gray_dark;
                }
             }
-            textarea{
+            textarea {
                height: rem(100) !important;
             }
          }
@@ -192,10 +192,11 @@
       gap: rem(32);
       @media (min-width: $tablet) {
          padding-left: rem(80);
-         border-left: rem(1) solid $white;
+         border-top: rem(1) solid rgba($color: #ffffff, $alpha: 0.2);
       }
       @media (max-width: $tablet) {
-         border-top: rem(1) solid $white;
+         border-top: rem(1) solid rgba($color: #ffffff, $alpha: 0.2);
+
          padding-block: rem(20);
          width: 100%;
          align-items: center;
