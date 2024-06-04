@@ -18,8 +18,8 @@
                }
             }
             .gfield {
-               flex: 1 1 calc(50% - rem(12));
-
+               flex: 1 1 calc(50% - rem(12)) !important;
+               grid-column: span 1 !important;
                input,
                textarea {
                   color: $gray;

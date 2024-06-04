@@ -26,7 +26,8 @@
    .blog &,
    .page-template-contact &,
    .post-type-archive-event &,
-   .page-template-technical-support & {
+   .page-template-technical-support &,
+   .page-template-default & {
       .header__logo {
          img {
             filter: invert(1) brightness(0);

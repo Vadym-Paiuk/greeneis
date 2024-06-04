@@ -19,7 +19,7 @@ if ( empty( $section ) ) {
 			       poster=""></video>
 		<?php endif; ?>
 	</div>
-	<div class="cotainer">
+	<div class="container">
 		<div class="hero__inner">
 			<div class="hero__content">
 				<?php if ( ! empty( $section['title'] ) ): ?>
