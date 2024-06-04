@@ -219,12 +219,31 @@
    <div class="container">
       <h2>160+ Vendors</h2>
       <div class="companies__inner">
-         <img  src="<?php echo $path;?>/assets/src/images/cloud/company-1.png" alt="" loading="lazy">
-         <img  src="<?php echo $path;?>/assets/src/images/cloud/company-2.png" alt="" loading="lazy">
-         <img  src="<?php echo $path;?>/assets/src/images/cloud/company-3.png" alt="" loading="lazy">
-         <img  src="<?php echo $path;?>/assets/src/images/cloud/company-4.png" alt="" loading="lazy">
-         <img  src="<?php echo $path;?>/assets/src/images/cloud/company-5.png" alt="" loading="lazy">
-         <img  src="<?php echo $path;?>/assets/src/images/cloud/company-6.png" alt="" loading="lazy">
+         <div class="companies__slider swiper">
+            <div class="companies__wrapper swiper-wrapper">
+               <div class="companies__slider swiper-slide">
+
+               </div>
+               <div class="companies__slider swiper-slide">
+                  <img  src="<?php echo $path;?>/assets/src/images/cloud/company-1.png" alt="" loading="lazy">
+               </div>
+               <div class="companies__slider swiper-slide">
+                  <img  src="<?php echo $path;?>/assets/src/images/cloud/company-2.png" alt="" loading="lazy">
+               </div>
+               <div class="companies__slider swiper-slide">
+                  <img  src="<?php echo $path;?>/assets/src/images/cloud/company-3.png" alt="" loading="lazy">
+               </div>
+               <div class="companies__slider swiper-slide">
+                  <img  src="<?php echo $path;?>/assets/src/images/cloud/company-4.png" alt="" loading="lazy">
+               </div>
+               <div class="companies__slider swiper-slide">
+                  <img  src="<?php echo $path;?>/assets/src/images/cloud/company-5.png" alt="" loading="lazy">
+               </div>
+               <div class="companies__slider swiper-slide">
+                  <img  src="<?php echo $path;?>/assets/src/images/cloud/company-6.png" alt="" loading="lazy">
+               </div>
+            </div>
+         </div>
 
       </div>
    </div>
