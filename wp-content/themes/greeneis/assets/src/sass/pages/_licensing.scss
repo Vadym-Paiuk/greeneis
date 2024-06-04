@@ -1,9 +1,15 @@
 .content-additional {
    background-color: $gray_bg;
-   padding-bottom: rem(150);
+   padding-bottom: clamp(rem(44), vw(150), rem(150));
    &__inner {
       display: flex;
       justify-content: space-between;
+      gap: rem(32);
+
+      @media (max-width: $tablet) {
+         display: grid;
+         grid-template-columns: 1fr;
+      }
    }
 
    &__content {
@@ -14,21 +20,31 @@
       color: $black;
 
       h3 {
+         @extend .h3-mob;
+         text-align: left;
       }
       p {
          color: $black_4;
+         @extend .p2-mob;
+      }
+      @media (max-width: $tablet) {
+         gap: rem(32);
       }
    }
 
    &__img-wrap {
       flex: 0 1 rem(410);
       display: flex;
-      gap: rem(60);
       flex-direction: column;
       gap: rem(32);
 
       p {
          color: $black_4;
+         @extend .p2-mob;
+         text-align: left;
+      }
+      @media (max-width: $tablet) {
+         gap: rem(24);
       }
    }
 
@@ -44,15 +60,19 @@
          height: 100%;
          object-fit: cover;
       }
+      @media (max-width: $tablet) {
+         width: 100%;
+         height: vwm(250);
+      }
    }
 }
 
 .content-steps {
-   padding-block: rem(150);
+   padding-block: clamp(rem(44), vw(150), rem(150));
    &__inner {
       display: flex;
       flex-direction: column;
-      gap: rem(100);
+      gap: clamp(rem(32), vw(100), rem(100));
    }
 
    &__header {
@@ -62,6 +82,7 @@
       margin-inline: auto;
       h2 {
          color: $black;
+         @extend .h4-mob;
       }
    }
 
@@ -69,6 +90,14 @@
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: rem(24);
+
+      @media (max-width: $tablet) {
+         grid-template-columns: repeat(2, 1fr);
+         gap: rem(32);
+      }
+      @media (max-width: $tabletSmall) {
+         grid-template-columns: 1fr;
+      }
    }
 
    &__item {
@@ -93,6 +122,14 @@
          @extend .h4;
          color: $white;
       }
+
+      @media (max-width: $tablet) {
+         width: rem(64);
+         height: rem(64);
+         p{
+            font-size: rem(18);
+         }
+      }
    }
 
    &__item-main {
@@ -107,27 +144,46 @@
       }
       p {
          @extend .p2;
-         color: $black_3;
+         @extend .p3-mob;
+         color: $black_4;
+      }
+      @media(max-width:$tablet){
+         h3{
+            font-size: rem(18);
+         }
+
       }
    }
 }
 
 .list-desc {
    background-color: $black_bg;
-   padding-block: rem(150);
+   padding-block: clamp(rem(44), vw(150), rem(150));
 
    &__inner {
       display: flex;
       flex-direction: column;
-      gap: rem(100);
+      gap: clamp(rem(32), vw(100), rem(100));
+
       h2 {
          color: $white;
+         @extend .h4-mob;
+         text-align: left;
       }
    }
 
    &__items {
-      display: grid;
-      grid-template-columns: repeat(7, 1fr);
+      @media (min-width: $tablet) {
+         display: grid;
+         grid-template-columns: repeat(7, 1fr);
+         row-gap: rem(32);
+      }
+      @media (max-width: $tablet) {
+         display: flex;
+         justify-content: space-between;
+         flex-wrap: wrap;
+         gap: rem(32);
+      }
    }
 
    &__item {
@@ -136,14 +192,24 @@
       align-items: center;
       text-align: center;
       gap: rem(24);
-      padding-inline: rem(24);
 
       p {
          @extend .capture;
          color: $white;
       }
-      &:not(:last-child) {
-         border-right: rem(1) solid $gray;
+      @media (min-width: $tablet) {
+         padding-inline: rem(24);
+
+         &:not(:last-child) {
+            border-right: rem(1) solid $gray;
+         }
+      }
+      @media (max-width: $tablet) {
+         flex: 0 1 calc(50% - rem(16));
+         margin-inline: auto;
+         p {
+            font-size: rem(18);
+         }
       }
    }
 
@@ -161,6 +227,4 @@
          width: rem(24);
       }
    }
-}
-.container {
 }

@@ -665,13 +665,18 @@
 
                padding-inline: rem(20);
                padding-block: rem(16);
+
+               font-family: $third_font;
+               box-sizing: border-box;
                @extend .p2;
                @extend .p3-mob;
                color: $gray_light;
                text-align: left;
+
                &::placeholder {
                   @extend .p2;
                   @extend .p3-mob;
+
                   text-align: left;
 
                   color: inherit;
@@ -685,9 +690,16 @@
                }
 
                @media (max-width: $tablet) {
-                  padding-block: rem(12);
+                  padding-block: rem(11);
                   padding-inline: rem(20);
-                  min-height: rem(44);
+                  min-height: rem(44) !important;
+                  font-size: rem(14);
+                  line-height: 1 !important;
+
+                  &::placeholder {
+                     font-size: rem(14);
+                     line-height: 1 !important;
+                  }
                }
             }
          }

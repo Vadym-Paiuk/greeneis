@@ -63,22 +63,34 @@
    .form {
       form {
          .gform_fields {
-            display: flex;
-            flex-wrap: wrap;
-            gap: rem(24);
-            @media (max-width: $tablet) {
-               display: grid;
-               grid-template-columns: 1fr;
-               gap: rem(16);
+            @media (min-width: $tablet) {
+               display: flex;
+               flex-wrap: wrap;
+               gap: rem(24);
             }
+            @media (max-width: $tablet) {
+               display: flex;
+               flex-wrap: wrap;
+            }
+         }
+
+         .gfield.gfield--width-half,
+         .gform_fields {
+            grid-column: initial;
          }
          .gfield {
             flex: 1 1 calc(50% - rem(12));
+            @media (max-width: $tablet) {
+               flex: 1 1 100%;
+            }
             input,
             textarea {
                &:not([type="submit"]) {
                   border-color: $gray_dark;
                }
+            }
+            textarea{
+               height: rem(100) !important;
             }
          }
          .gform_footer {
@@ -251,18 +263,18 @@
       justify-content: space-between;
       align-items: center;
 
-      padding-block: clamp(rem(24),vw(38),rem(38));
+      padding-block: clamp(rem(24), vw(38), rem(38));
       p {
          @extend .p2;
          color: $gray_4;
       }
-      @media(max-width:$tablet){
+      @media (max-width: $tablet) {
          display: grid;
          grid-template-columns: 1fr;
          justify-items: center;
          text-align: center;
          gap: rem(16);
-         p{
+         p {
             order: 1;
             font-size: rem(12);
          }

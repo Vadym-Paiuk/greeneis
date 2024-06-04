@@ -145,6 +145,7 @@
          <div class="web-content__middle">
             <div class="web-content__middle-inner">
                <div class="web-content__middle-img">
+
                   <img  src="<?php echo $path;?>/assets/src/images/icons/content-logo.svg" alt="" loading="lazy">
                </div>
                <div class="web-content__middle-border">
@@ -152,7 +153,10 @@
                </div>
             </div>
             <div class="web-content__img-web">
-               <img  src="<?php echo $path;?>/assets/src/images/automation_3/web-2.png" alt="" loading="lazy">
+                  <picture>
+                     <source  srcset="<?php echo $path;?>/assets/src/images/automation_3/web-mobile.png" media="(max-width:1023.98px);">
+                     <img  src="<?php echo $path;?>/assets/src/images/automation_3/web-2.png" alt="" loading="lazy">
+                  </picture>
             </div>
          </div>
 

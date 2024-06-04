@@ -1,8 +1,17 @@
 .process {
-   padding-bottom: rem(140);
+   padding-bottom: clamp(rem(44), vw(140), rem(140));
+   overflow: hidden;
    &__inner {
       img {
          height: rem(712);
+         width: 100%;
+      }
+      @media (max-width: $tablet) {
+         margin-inline: rem(-20);
+         img {
+            height: vwm(208);
+            object-fit: cover;
+         }
       }
    }
 }
@@ -10,11 +19,11 @@
 .content-list {
    background-color: $green;
    padding-top: rem(15);
-   padding-bottom: rem(150);
+   padding-bottom: clamp(rem(44), vw(150), rem(150));
    &__inner {
       display: flex;
       flex-direction: column;
-      gap: rem(100);
+      gap: clamp(rem(32), vw(100), rem(100));
    }
 
    &__header {
@@ -29,6 +38,13 @@
       }
       h2 {
          color: $white;
+         @extend .h4-mob;
+         text-align: left;
+      }
+      @media (max-width: $tablet) {
+         p {
+            font-size: rem(14);
+         }
       }
    }
 
@@ -36,12 +52,16 @@
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: rem(61);
+      @media (max-width: $tablet) {
+         grid-template-columns: 1fr;
+         gap: rem(32);
+      }
    }
 
    &__item {
       display: flex;
       flex-direction: column;
-      gap: rem(32);
+      gap: clamp(rem(24),vw(32),rem(32));
 
       &:not(:last-child) {
          position: relative;
@@ -53,7 +73,7 @@
             top: 0;
             bottom: 0;
             width: rem(1);
-            background-color: $gray
+            background-color: $gray;
          }
       }
    }
@@ -63,12 +83,17 @@
          @extend .capture;
          color: $white;
       }
+      @media (max-width: $tablet) {
+         font-size: rem(18);
+      }
    }
    &__item-content {
       display: flex;
       flex-direction: column;
       gap: rem(16);
       @extend .p2;
+      @extend .p3-mob;
+      text-align: left;
       color: $white_2;
 
       a {
@@ -102,6 +127,4 @@
          }
       }
    }
-}
-.container {
 }

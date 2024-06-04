@@ -16,13 +16,17 @@ if ( empty( $section ) ) {
 		<?php endif; ?>
 		<?php if ( ! empty( $section['features_list'] ) ): ?>
 			<div class="companies__inner">
-				<?php
-				foreach ( $section['features_list'] as $vendor ) {
-					if ( ! empty( $vendor['image'] ) ) {
-						echo wp_get_attachment_image( $vendor['image'], 'full' );
-					}
-				}
-				?>
+				<div class="companies__slider swiper">
+            	<div class="companies__wrapper swiper-wrapper">
+							<?php foreach ( $section['features_list'] as $vendor ) {?>
+								<div class="companies__slider swiper-slide">
+									<?php if ( ! empty( $vendor['image'] ) ) {?>							
+										<?php echo wp_get_attachment_image( $vendor['image'], 'full' );  ?>
+									<?php  } ?>
+								</div>
+							<?php  } ?>
+					</div>
+            </div>
 			</div>
 		<?php endif; ?>
 	</div>

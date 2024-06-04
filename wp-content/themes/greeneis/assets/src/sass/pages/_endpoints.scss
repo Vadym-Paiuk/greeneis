@@ -1,10 +1,17 @@
 .cards-dark {
    background-color: $gray_bg;
-   padding-bottom: rem(150);
+   padding-bottom: clamp(rem(44), vw(150), rem(150));
    &__inner {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: rem(24);
+      @media (max-width: $tablet) {
+         grid-template-columns: repeat(2, 1fr);
+      }
+      @media (max-width: $tabletSmall) {
+         grid-template-columns: 1fr;
+         gap: rem(16);
+      }
    }
 
    &__card {
@@ -13,6 +20,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      text-align: center;
       height: auto;
       gap: rem(24);
 
@@ -23,23 +31,33 @@
          @extend .capture;
          color: $white;
       }
+      @media (max-width: $tablet) {
+         gap: rem(16);
+         p {
+            font-size: rem(18);
+         }
+      }
    }
 }
 
 .list-info {
    background-color: $green;
-   padding-top: rem(150);
-   padding-bottom: rem(240);
+   padding-top: clamp(rem(44), vw(150), rem(150));
+   padding-bottom: clamp(rem(100), vw(240), rem(240));
 
    clip-path: polygon(0% 0%, 100% 0%, 100% 91.228%, 82.118% 100%, 42.014% 91.228%, 28.542% 95.712%, 0% 91.228%, 0% 0%);
 
+   @media (max-width: $tablet) {
+      clip-path: polygon(0% 0%, 100% 0%, 100% 97.78%, 80.667% 100%, 41.867% 96.604%, 25.067% 98.985%, 0% 97.78%, 0% 0%);
+   }
    &__header {
       width: 100%;
       max-width: rem(883);
-      margin-bottom: rem(100);
+      margin-bottom: clamp(rem(32), vw(100), rem(100));
 
       h2 {
          color: $white;
+         @extend .h4-mob;
       }
    }
 
@@ -48,6 +66,14 @@
       grid-template-columns: repeat(3, 1fr);
       row-gap: rem(48);
       column-gap: rem(25);
+      @media (max-width: $tablet) {
+         grid-template-columns: repeat(2, 1fr);
+      }
+      @media (max-width: $tabletSmall) {
+         grid-template-columns: 1fr;
+         gap: rem(32);
+         justify-items: center;
+      }
    }
 
    &__item {
@@ -55,6 +81,13 @@
       flex-direction: column;
       height: auto;
       gap: rem(24);
+
+      @media (max-width: $tabletSmall) {
+         align-items: center;
+         text-align: center;
+         width: 100%;
+         max-width: 90%;
+      }
    }
 
    &__item-main {
@@ -62,21 +95,34 @@
       flex-direction: column;
       gap: rem(16);
 
-      width: 100%;
-      max-width: rem(328);
       h3 {
          @extend .capture;
          color: $white;
       }
       p {
          @extend .p2;
+         @extend .p2-mob;
          color: $white_2;
+      }
+
+      @media (min-width: $tabletSmall) {
+         width: 100%;
+         max-width: rem(328);
+      }
+      @media (max-width: $tablet) {
+         align-self: center;
+         align-items: center;
+         text-align: center;
+         gap: rem(16);
+         h3 {
+            font-size: rem(18);
+         }
       }
    }
 }
 
 .cards-grid-content {
-   padding-bottom: rem(198);
+   padding-bottom: clamp(rem(64),vw(198),rem(198));
    padding-top: rem(60);
    &__inner {
    }
@@ -84,9 +130,10 @@
    &__header {
       width: 100%;
       max-width: rem(883);
-      margin-bottom: rem(100);
+      margin-bottom: clamp(rem(32), vw(100), rem(100));
       h2 {
          color: $black_bg;
+         @extend .h4-mob;
       }
    }
 
@@ -94,9 +141,11 @@
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: rem(24);
+      @media(max-width:$tabletSmall){
+         grid-template-columns: 1fr;
+      }
    }
    .cards-grid__card {
       background: rgba(205, 210, 205, 0.3);
    }
 }
-

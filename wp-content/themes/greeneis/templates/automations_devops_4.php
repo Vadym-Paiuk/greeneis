@@ -131,91 +131,103 @@
       <div class="list-grid__inner">
          <h2>Security advisory services include</h2>
          <div class="list-grid__grid">
+            <div class="list-grid__slider swiper">
+               <div class="list-grid__wrapper swiper-wrapper">
+                  <div class="list-grid__slide swiper-slide">
+                     <div class="list-grid__item">
+                        <div class="list-grid__item-icon icon-decor">
+                           <img  src="<?php echo $path;?>/assets/src/images/icons/list-grid-1.svg" alt="icon" loading="lazy">
+                        </div>
+                        <div class="list-grid__item-main">
+                           <h4>Security for cloud infrastructure:</h4>
+                           <ul>
+                              <li>Secure landing zones, applications, micro-services, and design patterns</li>
+                              <li>Manage holistic view of Azure tenant security</li>
+                              <li>Align to cloud security architecture frameworks</li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="list-grid__slide swiper-slide">
+                     <div class="list-grid__item">
+                        <div class="list-grid__item-icon icon-decor">
+                           <img  src="<?php echo $path;?>/assets/src/images/icons/list-grid-2.svg" alt="icon" loading="lazy">
+                        </div>
+                        <div class="list-grid__item-main">
+                           <h4>Proactive discovery and planning for:</h4>
+                           <ul>
+                              <li>Zero Trus</li>
+                              <li>Cloud securit</li>
+                              <li>Cybersecurity ris</li>
+                              <li>Identity managemen</li>
+                           </ul>
+                        </div>
+                     </div>
+           
+                  </div>
+                  <div class="list-grid__slide swiper-slide">
+                     <div class="list-grid__item">
+                        <div class="list-grid__item-icon icon-decor">
+                           <img  src="<?php echo $path;?>/assets/src/images/icons/list-grid-3.svg" alt="icon" loading="lazy">
+                        </div>
+                        <div class="list-grid__item-main">
+                           <h4>Security operations:</h4>
+                           <ul>
+                              <li>Modernize security operations and threat protection (SIEM + XDR)</li>
+                              <li>Modern Service Managemen</li>
+                              <li>Adoption and Change Managemen</li>
+                           </ul>
+                        </div>
+                     </div>  
+                  </div>
+                  <div class="list-grid__slide swiper-slide">
+                     <div class="list-grid__item">
+                        <div class="list-grid__item-icon icon-decor">
+                           <img  src="<?php echo $path;?>/assets/src/images/icons/list-grid-4.svg" alt="icon" loading="lazy">
+                        </div>
+                        <div class="list-grid__item-main">
+                           <h4>Security modernization:</h4>
+                           <ul>
+                              <li>Identity managemen</li>
+                              <li>Identity securit</li>
+                              <li>Compliance, information protection and privacy</li>
+                              <li>Zero Trust framewor</li>
+                           </ul>
+                        </div>
+                     </div>                  
+                  </div>
+                  <div class="list-grid__slide swiper-slide">
+                     <div class="list-grid__item">
+                        <div class="list-grid__item-icon icon-decor">
+                           <img  src="<?php echo $path;?>/assets/src/images/icons/list-grid-5.svg" alt="icon" loading="lazy">
+                        </div>
+                        <div class="list-grid__item-main">
+                           <h4>Security for modern work:</h4>
+                           <ul>
+                              <li>Secure the digital workplace, protect devices, identities and applications</li>
+                              <li>Minimize risk and reduce cost to identify, protect, and govern sensitive data</li>
+                           </ul>
+                        </div>
+                     </div>                     
+                  </div>
+                  <div class="list-grid__slide swiper-slide">
+                     <div class="list-grid__item">
+                        <div class="list-grid__item-icon icon-decor">
+                           <img  src="<?php echo $path;?>/assets/src/images/icons/list-grid-6.svg" alt="icon" loading="lazy">
+                        </div>
+                        <div class="list-grid__item-main">
+                           <h4>Zero Trust:</h4>
+                           <ul>
+                              <li>Zero Trust is a security solution framework to protect modern digital environments.</li>
+                              <li>Microsoft Security Services for Modernization align to Zero Trust as a core tenet.</li>
+                           </ul>
+                        </div>
+                     </div>                     
+                  </div>
+               </div>
+						<div class="swiper-pagination"></div>
 
-            <div class="list-grid__item">
-               <div class="list-grid__item-icon icon-decor">
-                  <img  src="<?php echo $path;?>/assets/src/images/icons/list-grid-1.svg" alt="icon" loading="lazy">
-               </div>
-               <div class="list-grid__item-main">
-                  <h4>Security for cloud infrastructure:</h4>
-                  <ul>
-                     <li>Secure landing zones, applications, micro-services, and design patterns</li>
-                     <li>Manage holistic view of Azure tenant security</li>
-                     <li>Align to cloud security architecture frameworks</li>
-                  </ul>
-               </div>
             </div>
-
-            <div class="list-grid__item">
-               <div class="list-grid__item-icon icon-decor">
-                  <img  src="<?php echo $path;?>/assets/src/images/icons/list-grid-2.svg" alt="icon" loading="lazy">
-               </div>
-               <div class="list-grid__item-main">
-                  <h4>Proactive discovery and planning for:</h4>
-                  <ul>
-                     <li>Zero Trus</li>
-                     <li>Cloud securit</li>
-                     <li>Cybersecurity ris</li>
-                     <li>Identity managemen</li>
-                  </ul>
-               </div>
-            </div>
-
-            <div class="list-grid__item">
-               <div class="list-grid__item-icon icon-decor">
-                  <img  src="<?php echo $path;?>/assets/src/images/icons/list-grid-3.svg" alt="icon" loading="lazy">
-               </div>
-               <div class="list-grid__item-main">
-                  <h4>Security operations:</h4>
-                  <ul>
-                     <li>Modernize security operations and threat protection (SIEM + XDR)</li>
-                     <li>Modern Service Managemen</li>
-                     <li>Adoption and Change Managemen</li>
-                  </ul>
-               </div>
-            </div>
-
-            <div class="list-grid__item">
-               <div class="list-grid__item-icon icon-decor">
-                  <img  src="<?php echo $path;?>/assets/src/images/icons/list-grid-4.svg" alt="icon" loading="lazy">
-               </div>
-               <div class="list-grid__item-main">
-                  <h4>Security modernization:</h4>
-                  <ul>
-                     <li>Identity managemen</li>
-                     <li>Identity securit</li>
-                     <li>Compliance, information protection and privacy</li>
-                     <li>Zero Trust framewor</li>
-                  </ul>
-               </div>
-            </div>
-
-            <div class="list-grid__item">
-               <div class="list-grid__item-icon icon-decor">
-                  <img  src="<?php echo $path;?>/assets/src/images/icons/list-grid-5.svg" alt="icon" loading="lazy">
-               </div>
-               <div class="list-grid__item-main">
-                  <h4>Security for modern work:</h4>
-                  <ul>
-                     <li>Secure the digital workplace, protect devices, identities and applications</li>
-                     <li>Minimize risk and reduce cost to identify, protect, and govern sensitive data</li>
-                  </ul>
-               </div>
-            </div>
-
-            <div class="list-grid__item">
-               <div class="list-grid__item-icon icon-decor">
-                  <img  src="<?php echo $path;?>/assets/src/images/icons/list-grid-6.svg" alt="icon" loading="lazy">
-               </div>
-               <div class="list-grid__item-main">
-                  <h4>Zero Trust:</h4>
-                  <ul>
-                     <li>Zero Trust is a security solution framework to protect modern digital environments.</li>
-                     <li>Microsoft Security Services for Modernization align to Zero Trust as a core tenet.</li>
-                  </ul>
-               </div>
-            </div>
-
          </div>
       </div>
    </div>
