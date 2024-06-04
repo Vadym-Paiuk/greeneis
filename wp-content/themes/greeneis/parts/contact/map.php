@@ -32,9 +32,9 @@ if ( empty( $section ) ) {
 				</div>
 			</div>
 			<div class="contact-map__map">
-				<img src="<?php echo $path; ?>/assets/src/images/contact/map.jpg"
-				     alt=""
-				     loading="lazy">
+				<?php if ( ! empty( $section['iframe'] ) ): ?>
+					<?php echo $section['iframe']; ?>
+				<?php endif; ?>
 			</div>
 		</div>
 	</div>
